@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "gilroy-regular";
+    src: url(./fonts/Gilroy-Regular.ttf);
+}
+@font-face {
+    font-family: "gilroy-medium";
+    src: url(./fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+    font-family: "gilroy-semibold";
+    src: url(./fonts/Gilroy-SemiBold.ttf);
+}
+@font-face {
+    font-family: "gilroy-bold";
+    src: url(./fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: "fredokaregular";
+    src: url(./fonts/FredokaOne-Regular.ttf);
+}
+@font-face {
+    font-family: "redrose";
+    src: url(./fonts/RedRose-Bold.ttf);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text{
+    font-family: "gilroy-semibold";
+}
+
+.main-hero-title{
+    font-family: "fredokaregular";
+}
+.sub-text{
+    font-family: "gilroy-regular";
+}
+.subtitle{
+    font-family: "redrose";
+}
+.timer-number{
+    font-family: "gilroy-bold";
+}
+
+
+
+
+
+
+
+/* menu-icon */
+.hamburger {
+    cursor: pointer;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  

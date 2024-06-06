@@ -3,9 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Entrecon Event</title>
+
+    
+
+    <!-- tailwind-cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom-css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- locomotive -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <!-- remix-icon-cdn -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
 </head>
 <body>
+
+<!-- locomotive-div -->
+<div id="main">
+
+
+
+<!--Hero-section-starts  -->
+<div class="Hero-sec w-full h-[120vh] sm:h-[105vh] lg:h-[130vh] bg-red-500 bg-cover bg-center" style="background-image: url(./images/hero-secimg.png);">
+
+    <!-- navbar-section-starts -->
+    <div class="navbar w-full h-[12vh] flex items-center px-8 justify-end lg:justify-between">
+        <div class="nav-links lg:flex items-center gap-10 text-white hidden lg:block">
+            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">ABOUT <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SCHEDULE <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS</a>
+            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72] px-4 border-2 border-[#F1CE72] rounded-3xl flex items-center justify-center">BOOK <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE </a>
+            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PAPER PRESENTATION</a>
+        </div>
+
+        <!-- contactus-btn -->
+        <div class="contact-btn hidden lg:block">
+            <a href="#" class="flex items-center text-[0.8rem] px-4 py-1 gap-3 border-2 border-[#F1CE72] rounded-3xl flex items-center justify-center text-white hover:text-[#F1CE72]">CONTACT US <span><img class="bg-[#F1CE72] px-2 py-1 rounded-md" src="./images/Right.png" alt=""></span></a>
+        </div>
+
+
+        <!-- menu-icon -->
+        <div class="menu-icon block lg:hidden">
+            <label class="hamburger">
+                <input type="checkbox">
+                <svg viewBox="0 0 32 32">
+                  <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                  <path class="line" d="M7 16 27 16"></path>
+                </svg>
+              </label>
+        </div>
+    </div>
+
+    <!-- navbar-ends -->
+
+
+    <!-- hero-text-section-starts -->
+    <div class="hero-text-sec w-full h-auto lg:h-[50vh] flex flex-col lg:flex-row gap-8 lg:gap-0">
+        <div class="main-hero-title lg:h-full w-[80%] lg:w-[60vw] flex items-center justify-start pl-5 lg:pl-8">
+            <h1 class="text-[2.5rem] lg:text-[4rem] leading-none text-white">WORLD’S <span class="text-[#F1CE72]">FIRST</span><br/> GLOBAL STARTUP <br/>ECOSYSTEM</h1>
+        </div>
+        <div class="sub-text w-full lg:w-[40vw] lg:h-full flex items-center justify-center">
+            <p class="text-white text-[1rem] lg:text-[1.5rem] leading-none w-[90%] lg:w-[60%] text-justify">"Emerging trends in Research, Innovation & Entrepreneurship – <span class="text-[#F1CE72]">A way forward</span>”</p>
+        </div>
+    </div>
+
+    <!-- hero-text-section-ends -->
+
+<!-- herosection-logo-banner-starts -->
+<div class="relative w-full lg:h-[20vh] h-[10vh] mt-10 lg:mt-0">
+    <div class="absolute inset-0 bg-[#F1CE72] opacity-50"></div>
+    <div class="banner-logos relative w-full h-full flex items-center justify-around">
+        <img class="h-[80%]" src="./images/entricon.png" alt="">
+        <img class="h-[80%]" src="./images/mount-carmel.png" alt="">
+        <img class="h-[60%] lg:h-[80%]" src="./images/innov-intitute.png" alt="">
+        <img class="h-[60%] lg:h-[80%]" src="./images/innov-cell.png" alt="">
+    </div>
+</div>
+<!-- herosection-logo-banner-ends -->
+
+
+<!-- date&location-starts -->
+    <div class="venue-section w-full h-[20vh] mt-10">
+        <div class="subtitle w-full h-[10vh] flex items-center justify-center">
+            <h2 class="subtitle text-[2.5rem] lg:text-[3.5rem] text-white">INDIA CHAPTER</h2>
+        </div>
+        <div class="venue-details w-full h-[10vh] flex items-center justify-center gap-3 lg:gap-[6vw] lg:flex-row flex-col">
+            <h3 class="venue-place text-white flex gap-3 text-[1.2rem] items-center"><span><img class="w-[2rem]" src="./images/Place Marker.png" alt=""></span>Mount Carmel College</h3>
+            <h3 class="venue-date text-white flex gap-3 text-[1.2rem] items-center"><span><img class="w-[2rem]" src="./images/Calendar.png" alt=""></span>SEPTEMBER <span class="text-[#F1CE72]">24</span> & <span class="text-[#F1CE72]">25</span></h3>
+        </div>
+    </div>
+
+<!-- date&location-ends -->
+
+
+
+<!-- hero-btns-starts -->
+    <div class="hero-btns w-full h-[20vh] lg:h-[10vh]">
+        <div class="btns-list w-full h-full flex lg:flex-row flex-col items-center justify-center gap-5 lg:gap-10 ">
+            <img class="w-[15rem]" src="./images/Group 196.svg" alt="">
+            <img class="w-[15rem]" src="./images/Group 197.svg" alt="">
+        </div>
+    </div>
+<!-- hero-btns-ends -->
+
+
+
+
+</div>
+
+<!-- hero-section-ends -->
+
+
+
+<!-- timer-section-starts -->
+<div class="timer-section w-full h-[40vh] lg:h-[50vh] flex items-center justify-center">
+    <div class="timer-content w-full lg:w-[80vw] h-[30vh] lg:rounded-3xl bg-black flex items-center justify-around px-2 lg:px-10">
+        <div class="timer-box px-2 lg:px-6 py-1 lg:py-2 border-2 border-[#F1CE72] rounded-xl flex flex-col items-center justify-center ">
+            <h2 class="text-[#F1CE72] text-[2.5rem] lg:text-[3rem] timer-number" id="days">90</h2>
+            <h4 class="text-white timer-text text-[1rem]">DAYS</h4>
+        </div>
+
+        <!-- hours -->
+        <div class="timer-box px-2 lg:px-6 py-1 lg:py-2 border-2 border-[#F1CE72] rounded-xl flex flex-col items-center justify-center ">
+            <h2 class="text-[#F1CE72] text-[2.5rem] lg:text-[3rem] timer-number" id="hours">90</h2>
+            <h4 class="text-white timer-text text-[1rem]">HOURS</h4>
+        </div>
+        
+        <!-- minutes -->
+        <div class="timer-box px-2 lg:px-6 py-1 lg:py-2 border-2 border-[#F1CE72] rounded-xl flex flex-col items-center justify-center ">
+            <h2 class="text-[#F1CE72] text-[2.5rem] lg:text-[3rem] timer-number" id="minutes">90</h2>
+            <h4 class="text-white timer-text text-[1rem]">MINUTES</h4>
+        </div>
+
+        <!-- seconds -->
+        <div class="timer-box px-2 lg:px-6 py-1 lg:py-2 border-2 border-[#F1CE72] rounded-xl flex flex-col items-center justify-center ">
+            <h2 class="text-[#F1CE72] text-[2.5rem] lg:text-[3rem] timer-number" id="seconds">90</h2>
+            <h4 class="text-white timer-text text-[1rem]">SECONDS</h4>
+        </div>
+    </div>
+</div>
+<!-- timer-section-ends -->
+
+
+
+
+
+
+<div class="heh w-full h-screen bg-green-500"></div>
+
+
+
+
+
+</div>
+
+
+<!-- locomotive cdn -->
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+
+<!-- gsap cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <!-- scroll trigger cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit-->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <!-- shery -->
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
     
+<!-- own js -->
+    <script src="main.js"></script>
 </body>
 </html>
