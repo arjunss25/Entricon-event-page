@@ -34,31 +34,171 @@
 
     <!-- navbar-section-starts -->
     <div class="navbar w-full h-[12vh] flex items-center px-8 justify-end lg:justify-between">
-        <div class="nav-links lg:flex items-center gap-10 text-white hidden lg:block">
-            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">ABOUT <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
-            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SCHEDULE <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
-            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS</a>
-            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72] px-4 border-2 border-[#F1CE72] rounded-3xl flex items-center justify-center">BOOK <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
-            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE </a>
-            <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PAPER PRESENTATION</a>
+
+
+
+<!-- Menu Icon -->
+<div class="menu-icon block lg:hidden p-4">
+    <label class="hamburger cursor-pointer">
+        <input type="checkbox" id="menu-toggle">
+        <svg viewBox="0 0 32 32">
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+        </svg>
+    </label>
+</div>
+
+<!-- Nav Links for Mobile -->
+<div class="nav-links-mobile bg-gray-800 text-white p-4 hidden lg:hidden absolute w-full top-20 left-0 h-auto z-40">
+    <div class="relative">
+        <a href="#" id="about-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">ABOUT <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+        <div id="about-dropdown-mobile" class="dropdown-content bg-gray-700 text-white rounded-lg mt-2 py-2">
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-conference">ABOUT THE CONFERENCE</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-global">ABOUT ENTRECON GLOBAL</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-carmel">ABOUT MOUNT CARMEL COLLEGE</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-director">MOUNT CARMEL DIRECTOR’S MESSAGE</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-founder">ENTRECON GLOBAL FOUNDER’S MESSAGE</a>
         </div>
+    </div>
+    <a href="#" id="schedule-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">SCHEDULE <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+    <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS</a>
+    <div class="relative">
+        <a href="#" id="book-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">BOOK <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+        <div id="book-dropdown-mobile" class="dropdown-content bg-gray-700 text-white rounded-lg mt-2 py-2">
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-grab-pass">GRAB YOUR PASS</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-book-stall">BOOK YOUR STALL</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-be-sponsor">BE YOUR SPONSOR</a>
+        </div>
+    </div>
+    <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
+    <a href="#" id="paper-presentation-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">PAPER PRESENTATION</a>
+</div>
+
+<!-- Nav Links for Desktop -->
+<div class="nav-links lg:flex items-center gap-10 text-white hidden lg:block relative">
+    <div class="relative">
+        <a href="#" id="about-link" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">ABOUT <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+        <div id="about-dropdown" class="dropdown-content absolute bg-gray-800 text-white rounded-lg mt-2 py-2 w-48 shadow-lg">
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-about-conference">ABOUT THE CONFERENCE</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-about-global">ABOUT ENTRECON GLOBAL</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-about-carmel">ABOUT MOUNT CARMEL COLLEGE</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-about-director">MOUNT CARMEL DIRECTOR’S MESSAGE</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-about-founder">ENTRECON GLOBAL FOUNDER’S MESSAGE</a>
+        </div>
+    </div>
+    <a href="#" id="schedule-link" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SCHEDULE <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+    <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS</a>
+    <div class="relative">
+        <a href="#" id="book-link" class="flex items-center text-[0.8rem] hover:text-[#F1CE72] px-4 border-2 border-[#F1CE72] rounded-3xl justify-center">BOOK <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+        <div id="book-dropdown" class="dropdown-content absolute bg-gray-800 text-white rounded-lg mt-2 py-2 w-48 shadow-lg">
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-grab-pass">GRAB YOUR PASS</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-book-stall">BOOK YOUR STALL</a>
+            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-be-sponsor">BE YOUR SPONSOR</a>
+        </div>
+    </div>
+    <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
+    <a href="#" id="paper-presentation-link" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PAPER PRESENTATION</a>
+</div>
+
+<!-- Modals -->
+<div id="modal-about-conference" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999]">
+    <div class="bg-white rounded-lg p-8 w-[90vw] h-[90vh] mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Conference</h2>
+        <p>Details about the conference...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-conference')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-global" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Global</h2>
+        <p>Details about global...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-global')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-carmel" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Founder</h2>
+        <p>Details about the founder...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-carmel')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-director" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Director</h2>
+        <p>Details about the director...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-director')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-founder" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Enthusiast</h2>
+        <p>Details about the enthusiast...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-founder')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-schedule" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Schedule</h2>
+        <p>Details about the schedule...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-paper-presentation" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Paper Presentation</h2>
+        <p>Details about the paper presentation...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-paper-presentation')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-grab-pass" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Grab Your Pass</h2>
+        <p>Details about grabbing your pass...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-grab-pass')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-book-stall" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Book Your Stall</h2>
+        <p>Details about booking your stall...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-book-stall')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-be-sponsor" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Be Your Sponsor</h2>
+        <p>Details about being a sponsor...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-be-sponsor')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+
+
 
         <!-- contactus-btn -->
         <div class="contact-btn hidden lg:block">
             <a href="#" class="flex items-center text-[0.8rem] px-4 py-1 gap-3 border-2 border-[#F1CE72] rounded-3xl flex items-center justify-center text-white hover:text-[#F1CE72]">CONTACT US <span><img class="bg-[#F1CE72] px-2 py-1 rounded-md" src="./images/Right.png" alt=""></span></a>
         </div>
 
-
-        <!-- menu-icon -->
-        <div class="menu-icon block lg:hidden">
-            <label class="hamburger">
-                <input type="checkbox">
-                <svg viewBox="0 0 32 32">
-                  <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                  <path class="line" d="M7 16 27 16"></path>
-                </svg>
-              </label>
-        </div>
     </div>
 
     <!-- navbar-ends -->
@@ -67,7 +207,7 @@
     <!-- hero-text-section-starts -->
     <div class="hero-text-sec w-full h-auto lg:h-[50vh] flex flex-col lg:flex-row gap-8 lg:gap-0">
         <div class="main-hero-title lg:h-full w-[80%] lg:w-[60vw] flex items-center justify-start pl-5 lg:pl-8">
-            <h1 class="text-[2.5rem] lg:text-[4rem] leading-none text-white">WORLD’S <span class="text-[#F1CE72]">FIRST</span><br/> GLOBAL STARTUP <br/>ECOSYSTEM</h1>
+            <h1 class="text-[2.5rem] lg:text-[4rem] xl:text-[5rem] leading-none text-white">WORLD’S <span class="text-[#F1CE72]">FIRST</span><br/> GLOBAL STARTUP <br/>ECOSYSTEM</h1>
         </div>
         <div class="sub-text w-full lg:w-[40vw] lg:h-full flex items-center justify-center">
             <p class="text-white text-[1rem] lg:text-[1.5rem] leading-none w-[90%] lg:w-[60%] text-justify">"Emerging trends in Research, Innovation & Entrepreneurship – <span class="text-[#F1CE72]">A way forward</span>”</p>
@@ -123,8 +263,8 @@
 
 
 <!-- timer-section-starts -->
-<div class="timer-section w-full h-[40vh] lg:h-[50vh] flex items-center justify-center">
-    <div class="timer-content w-full lg:w-[80vw] h-[30vh] lg:rounded-3xl bg-black flex items-center justify-around px-2 lg:px-10">
+<div class="timer-section w-full h-[40vh] lg:h-[50vh] flex items-center justify-center  mt-5 lg:mt-0">
+    <div class="timer-content w-full lg:w-[80vw] h-[30vh] lg:rounded-3xl bg-black flex items-center justify-around px-1 lg:px-10">
         <div class="timer-box px-2 lg:px-6 py-1 lg:py-2 border-2 border-[#F1CE72] rounded-xl flex flex-col items-center justify-center ">
             <h2 class="text-[#F1CE72] text-[2.5rem] lg:text-[3rem] timer-number" id="days">90</h2>
             <h4 class="text-white timer-text text-[1rem]">DAYS</h4>
@@ -156,7 +296,361 @@
 
 
 
-<div class="heh w-full h-screen bg-green-500"></div>
+<!-- why-to-attend-starts -->
+<div class=" w-full h-auto lg:h-screen">
+    <div class="why-title bg-black h-[15vh] w-full flex items-center justify-center mt-5 lg:mt-0">
+        <h2 class=" text-[2.2rem] lg:text-[3rem] text-white">WHY TO <span class="text-[#F1CE72]">ATTEND?</span></h2>
+    </div>
+
+
+
+    <div class="why-content-sec w-full h-[70vh] lg:h-[35vh] flex lg:flex-row flex-col items-center justify-center">
+
+        <div class="why-content-left w-full lg:w-[40vw] h-[50vh] lg:h-[35vh] flex flex-col items-start justify-center pl-8">
+            <h5 class="text-[1.2rem]"><span>⦿</span> Exposure to new trends and emerging technologies</h5>
+            <h5 class="text-[1.2rem]"><span>⦿</span> Opportunity to pitch your own startup</h5>
+            <h5 class="text-[1.2rem]"><span>⦿</span> Chance to attend panels on relevant topics</h5>
+        </div>
+
+        <div class="why-content-left w-full lg:w-[40vw] h-[40vh] lg:h-[35vh] flex flex-col items-start justify-start lg:justify-center pl-8">
+            <h5 class="text-[1.2rem]"><span>⦿</span> Exposure to new trends and emerging technologies</h5>
+            <h5 class="text-[1.2rem]"><span>⦿</span> Opportunity to pitch your own startup</h5>
+            <h5 class="text-[1.2rem]"><span>⦿</span> Chance to attend panels on relevant topics</h5>
+        </div>
+    </div>
+
+
+
+    <!-- black-btn-boxes -->
+     <div class="why-box-content w-full h-[70vh] lg:h-[40vh] flex justify-center items-center gap-10 flex-col lg:flex-row">
+
+        <div class="why-box-1 bg-black w-[90vw] lg:w-[35vw] h-[28vh] rounded-3xl flex flex-col items-start justify-between px-5 py-5">
+            <div class="box-text">
+                <h3 class="why-box-title text-white text-[1.8rem]">Grab Your Pass <span class="text-[2rem] text-[#F1CE72]">.</span></h3>
+                <p class="why-box-para text-white text-[1rem]">Explore Panels, Network & Invest in Startups</p>
+            </div>
+
+            <div class="box-btn">
+                <img class="w-[70%] cursor-pointer" src="./images/grabbtn.svg" alt="">
+            </div>
+        </div>
+
+
+        <div class="why-box-1 bg-black w-[90vw] lg:w-[35vw] h-[28vh] rounded-3xl flex flex-col items-start justify-between px-5 py-5">
+            <div class="box-text">
+                <h3 class="why-box-title text-white text-[1.8rem]">Book Your Stall <span class="text-[2rem] text-[#F1CE72]">.</span></h3>
+                <p class="why-box-para text-white text-[1rem] leading-none">Maximize Your Exposure – Book a Stall and Showcase Your Ideas at Our Event Now!</p>
+            </div>
+
+            <div class="box-btn">
+                <img class="w-[70%] cursor-pointer" src="./images/bookbtn.svg" alt="">
+            </div>
+        </div>
+        
+     </div>
+
+
+</div>
+
+<!-- why-to-attend-ends -->
+
+
+
+<!-- Advisory-Body-starts -->
+
+    <div class="advisory-body-main w-full h-auto">
+
+        <div class="why-title bg-black h-[17vh] lg:h-[15vh] w-full flex items-center justify-center mt-5 lg:mt-0 px-3 lg:px-0">
+            <h2 class=" text-[1.8rem] lg:text-[3rem] text-white leading-none text-center">CONFERENCE <span class="text-[#F1CE72]">ADVISORY BOARD MEMBERS</span></h2>
+        </div>
+
+
+        <!-- advisory-content-section -->
+         <div class="advisory-content w-full h-auto xl:h-[120vh] lg:h-[110vh]  flex flex-col items-center justify-center">
+
+
+            <div class="sec-1 flex items-center justify-around lg:flex-row flex-col mt-[8vh] lg:mt-0">
+
+
+                <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                    <img class="w-[70%]" src="./images/gilad 1.png" alt="">
+
+                    <div class="name-sec">
+                        <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">Gilad Segev</h3>
+                    </div>
+                    <div class="desig w-full flex justify-center items-center">
+                        <h2 class="text-black text-[0.8rem] xl:text-[1rem] text-center w-[70%] leading-none">Business Development and<br/>
+                            International Marketing
+                            </h2>
+                    </div>
+                </div>
+
+
+                <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                    <img class="w-[70%]" src="./images/george lekha.png" alt="">
+
+                    <div class="name-sec">
+                        <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">Dr GEORGE LEKHA
+                        </h3>
+                    </div>
+                    <div class="desig flex justify-center items-center w-full ">
+                        <h2 class="text-black text-[0.8rem] xl:text-[1rem] text-center leading-none">Principal<br/>
+                            Mount Carmel College</h2>
+                    </div>
+                </div>
+
+
+                <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                    <img class="w-[70%]" src="./images/ramesh.png" alt="">
+
+                    <div class="name-sec">
+                        <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">Dr S RAMESH</h3>
+                    </div>
+                    <div class="desig flex justify-center items-center w-full ">
+                        <h2 class="text-black text-[0.8rem] xl:text-[1rem] leading-none text-center w-[60%]">Dean, International Programs and Partnerships<br />
+                            Mount Carmel College
+                            </h2>
+                    </div>
+                </div>
+
+                
+
+                
+            </div>
+
+
+
+            <!-- sec2 -->
+            <div class="sec-2 flex items-center justify-around  lg:flex-row flex-col mt-0 xl:mt-10">
+
+                <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                    <img class="w-[70%]" src="./images/suma.png" alt="">
+
+                    <div class="name-sec">
+                        <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">Dr SUMA SINGH</h3>
+                    </div>
+                    <div class="desig flex justify-center items-center w-full">
+                        <h2 class="text-black text-[0.8rem] xl:text-[1rem] text-center leading-none">Registrar Academics<br/>
+                            Mount Carmel College</h2>
+                    </div>
+                </div>
+
+
+                <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                    <img class="w-[70%]" src="./images/pandey.png" alt="">
+
+                    <div class="name-sec">
+                        <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">PRIYANKA PANDYA</h3>
+                    </div>
+                    <div class="desig flex justify-center items-center w-full">
+                        <h2 class="text-black text-[0.8rem] xl:text-[1rem] text-center leading-none w-[70%]">CEO and Founder of
+                            Finacquis<br/>
+                            Entrepreneur and Investor
+                            </h2>
+                    </div>
+                </div>
+                
+            </div>
+           
+
+
+         </div>
+
+    </div>
+
+
+<!-- Advisory-Body-ends -->
+
+
+<!-- Speakers-section-starts -->
+<div class="speakers w-full h-[100vh] bg-purple-200">
+
+</div>
+
+<!-- Speakers-section-ends -->
+
+
+
+<!-- Our-sponsors-section-starts -->
+
+    <div class="our-sponsors-main w-full h-auto lg:h-[70vh]">
+        <div class="sponsors-title bg-black h-auto lg:h-[15vh] w-full flex items-center justify-center mt-5 lg:mt-0  py-1">
+            <h2 class=" text-[2.2rem] lg:text-[3rem] text-white">OUR <span class="text-[#F1CE72]">SPONSORS</span></h2>
+        </div>
+
+
+        <!-- Sponsor logos -->
+         <div class="sponsor-logos w-full h-auto lg:h-[55vh] bg-white flex lg:flex-row flex-col items-center justify-around py-5 gap-3 lg:gap-0">
+            <img class="w-[40vw] lg:w-[15vw]" src="./images/psynest logo.svg" alt="">
+            <img class="w-[40vw] lg:w-[15vw]" src="./images/dr coaching&consulting logo.svg" alt="">
+            <img class="w-[40vw] lg:w-[15vw]" src="./images/obh-logo.svg" alt="">
+            <img class="w-[40vw] lg:w-[15vw]" src="./images/notechlogo.svg" alt="">
+         </div>
+    </div>
+
+
+
+
+<!-- Our-sponsors-section-ends -->
+
+
+<!-- core-team-starts -->
+
+
+<!-- main container -->
+<div class="coremain w-full h-full flex flex-col items-center justify-center bg-black py-5">
+    <!-- Heading - board members -->
+    <div class="core-team w-full lg:h-[20vh] xl:h-[25vh] bg-black flex flex-col items-center justify-center">
+        <h1 class="text-white text-[2.5rem] lg:text-[3rem] xl:text-[4rem] w-full text-center">CORE <span class="text-[#F1CE72]">TEAM</span></h1> 
+    </div>
+    <div class="coreimg-contents w-[95vw] h-auto lg:h-[60vh] flex flex-col lg:flex-row items-center justify-between gap-[70px] lg:gap-0 py-[15%] lg:py-0">
+        <div class="first flex flex-col items-center justify-around gap-[15px]">
+            <img  class="w-[80vw] lg:w-[20vw]" src="./images/Group 195.png" alt="">
+            <head-para class="flex flex-col items-center justify-center">
+            <h1 class="text-[#F1CE72] text-[1.3rem] xl:text-[1.5rem] ">SHIJU BABU</h1>
+            <p class="text-white text-[1rem] ">FOUNDER</p>
+            </head-para>
+            <img class="w-[7vw] lg:w-[2vw]" src="./images/LinkedIn 2.png" alt="">
+        </div>
+
+        <div class="Second flex flex-col items-center justify-around gap-[15px]">
+            <img class="w-[80vw] lg:w-[20vw]" src="./images/Alon Bender advisor2 2.png" alt="">
+            <head-para class="flex flex-col items-center justify-center">
+            <h1 class="text-[#F1CE72] text-[1.3rem] xl:text-[1.5rem] ">ALON BENDER</h1>
+            <p class="text-white text-[1rem] ">CO-FOUNDER</p>
+            </head-para>
+            <img class="w-[7vw] lg:w-[2vw]" src="./images/LinkedIn 2.png" alt="">
+        </div>
+
+        <div class="third flex flex-col items-center justify-around gap-[15px]">
+            <img class="w-[80vw] lg:w-[20vw]" src="./images/oliver 1.png" alt="">
+            <head-para class="flex flex-col items-center justify-center">
+            <h1 class="text-[#F1CE72] text-[1.3rem] xl:text-[1.5rem] ">HILLA OVIL-BRENNER</h1>
+            <p class="text-white text-[1rem] ">CO-FOUNDER</p>
+            </head-para>
+            <img class="w-[7vw] lg:w-[2vw]" src="./images/LinkedIn 2.png" alt="">
+        </div>
+
+        <div class="fourth flex flex-col items-center justify-around gap-[15px]">
+            <img class="w-[80vw] lg:w-[20vw]" src="./images/gilad 1.png" alt="">
+            <head-para class="flex flex-col items-center justify-center">
+            <h1 class="text-[#F1CE72] text-[1.3rem] xl:text-[1.5rem] ">GILAD SEGEV</h1>
+            <p class="text-white text-[1rem] ">CO-FOUNDER</p>
+            </head-para>
+            <img class="w-[7vw] lg:w-[2vw]" src="./images/LinkedIn 2.png" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+<!-- core-team-ends -->
+
+
+<!-- book-yor-slot-animation-section-starts -->
+
+<div class="book-yourslot-animation w-full h-[20vh] lg:h-[40vh] flex items-center justify-center  z-0">
+    <div class="anime-content w-full h-[8vh] xl:h-[10vh] bg-[#F1CE72] flex items-center overflow-x-hidden relative">
+        <div class="scrolling-content flex items-center">
+            <!-- First set of items -->
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+        </div>
+        <!-- Duplicate the scrolling content to create an infinite loop effect -->
+        <div class="scrolling-content flex items-center">
+            <!-- Second set of items -->
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            <a class="scroll-item flex items-center text-[lg]  lg:text-2xl whitespace-nowrap" href="#">BOOK YOUR SLOT IN THE BATTLE GROUND <span><img class="w-8 lg:w-12" src="./images/Right.svg" alt=""></span></a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- book-yor-slot-animation-section-ends -->
+
+
+
+<!-- footer-starts -->
+
+    <div class="footer-main w-full h-auto">
+        <div class="footer-title-sec w-full h-[45vh] bg-[#EFEFEF]">
+            <div class="main-hero-title lg:h-full w-[80%] lg:w-[60vw] flex items-center justify-start pl-5 lg:pl-8">
+                <h1 class="text-[2.5rem] lg:text-[4rem] xl:text-[5rem] leading-none text-black">WORLD’S <span class="text-[#F1CE72]">FIRST</span><br/> GLOBAL STARTUP <br/>ECOSYSTEM</h1>
+            </div>
+        </div>
+
+        
+
+        <!-- Footer -->
+<footer class="bg-black text-white py-8 px-4">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
+            <div>
+                <h3 class="text-lg font-bold mb-4">ABOUT</h3>
+                <ul>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-conference">ABOUT THE CONFERENCE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-global">ABOUT ENTRECON GLOBAL</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-carmel">ABOUT MOUNT CARMEL COLLEGE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-director">MOUNT CARMEL DIRECTOR’S MESSAGE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-founder">ENTRECON GLOBAL FOUNDER’S MESSAGE</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">SCHEDULE</h3>
+                <ul>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-schedule">VIEW SCHEDULE</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">SPEAKERS</h3>
+                <ul>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#">VIEW SPEAKERS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">BOOK</h3>
+                <ul>
+                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-grab-pass">GRAB YOUR PASS</a></li>
+                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-book-stall">BOOK YOUR STALL</a></li>
+                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-be-sponsor">BE YOUR SPONSOR</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">PITCH BATTLE</h3>
+                <ul>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#">VIEW DETAILS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">PAPER PRESENTATION</h3>
+                <ul>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-paper-presentation">VIEW DETAILS</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+    </div>
+
+ <!-- footer-ends -->
 
 
 

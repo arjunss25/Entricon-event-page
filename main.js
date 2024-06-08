@@ -69,3 +69,190 @@ const x = setInterval(function() {
     }
 }, 1000);
 
+
+
+
+
+
+// dropdown
+document.addEventListener('DOMContentLoaded', function () {
+    const aboutLink = document.getElementById('about-link');
+    const aboutDropdown = document.getElementById('about-dropdown');
+
+    aboutLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        aboutDropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!aboutLink.contains(event.target) && !aboutDropdown.contains(event.target)) {
+            aboutDropdown.classList.remove('show');
+        }
+    });
+
+    const dropdownItems = aboutDropdown.querySelectorAll('a[data-target]');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            const modalId = item.getAttribute('data-target');
+            document.getElementById(modalId).classList.add('show');
+        });
+    });
+
+    const scheduleLink = document.getElementById('schedule-link');
+    scheduleLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('modal-schedule').classList.add('show');
+    });
+
+    const paperPresentationLink = document.getElementById('paper-presentation-link');
+    paperPresentationLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('modal-paper-presentation').classList.add('show');
+    });
+
+    const bookLink = document.getElementById('book-link');
+    const bookDropdown = document.getElementById('book-dropdown');
+
+    bookLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        bookDropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!bookLink.contains(event.target) && !bookDropdown.contains(event.target)) {
+            bookDropdown.classList.remove('show');
+        }
+    });
+
+    const bookDropdownItems = bookDropdown.querySelectorAll('a[data-target]');
+    bookDropdownItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            const modalId = item.getAttribute('data-target');
+            document.getElementById(modalId).classList.add('show');
+        });
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinksMobile = document.querySelector('.nav-links-mobile');
+
+    menuToggle.addEventListener('change', function () {
+        if (menuToggle.checked) {
+            navLinksMobile.classList.remove('hidden');
+            navLinksMobile.classList.add('show');
+        } else {
+            navLinksMobile.classList.add('hidden');
+            setTimeout(() => {
+                navLinksMobile.classList.remove('show');
+            }, 300); // match the transition duration
+        }
+    });
+
+    // Mobile Dropdown
+    const aboutLinkMobile = document.getElementById('about-link-mobile');
+    const aboutDropdownMobile = document.getElementById('about-dropdown-mobile');
+
+    aboutLinkMobile.addEventListener('click', function (event) {
+        event.preventDefault();
+        aboutDropdownMobile.classList.toggle('show');
+    });
+
+    const scheduleLinkMobile = document.getElementById('schedule-link-mobile');
+    scheduleLinkMobile.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('modal-schedule').classList.add('show');
+        closeMobileMenu(); // Close the mobile menu
+    });
+
+    const paperPresentationLinkMobile = document.getElementById('paper-presentation-link-mobile');
+    paperPresentationLinkMobile.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('modal-paper-presentation').classList.add('show');
+        closeMobileMenu(); // Close the mobile menu
+    });
+
+    const bookLinkMobile = document.getElementById('book-link-mobile');
+    const bookDropdownMobile = document.getElementById('book-dropdown-mobile');
+
+    bookLinkMobile.addEventListener('click', function (event) {
+        event.preventDefault();
+        bookDropdownMobile.classList.toggle('show');
+    });
+
+    const bookDropdownMobileItems = bookDropdownMobile.querySelectorAll('a[data-target]');
+    bookDropdownMobileItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            const modalId = item.getAttribute('data-target');
+            document.getElementById(modalId).classList.add('show');
+            closeMobileMenu(); // Close the mobile menu
+        });
+    });
+
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        modal.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    });
+
+    function closeMobileMenu() {
+        menuToggle.checked = false;
+        navLinksMobile.classList.add('hidden');
+        setTimeout(() => {
+            navLinksMobile.classList.remove('show');
+        }, 300); // match the transition duration
+    }
+
+    const dropdownItemsMobile = aboutDropdownMobile.querySelectorAll('a[data-target]');
+    dropdownItemsMobile.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            const modalId = item.getAttribute('data-target');
+            document.getElementById(modalId).classList.add('show');
+            closeMobileMenu(); // Close the mobile menu
+        });
+    });
+});
+
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('show');
+}
+
+  
+
+
+
+
+
+
+
+
+
+// footer
+
+// Event listeners for footer dropdowns
+// Event listener for opening modals
+const dropdownItems = document.querySelectorAll('a[data-target]');
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function (event) {
+        event.preventDefault();
+        const modalId = item.getAttribute('data-target');
+        document.getElementById(modalId).classList.add('show'); // Check this line
+    });
+});
+
+// Event listener for closing modals
+const modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.remove('show'); // Check this line
+        }
+    });
+});
+
