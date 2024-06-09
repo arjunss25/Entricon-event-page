@@ -597,17 +597,19 @@
             <div>
                 <h3 class="text-lg font-bold mb-4">ABOUT</h3>
                 <ul>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-conference">ABOUT THE CONFERENCE</a></li>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-global">ABOUT ENTRECON GLOBAL</a></li>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-carmel">ABOUT MOUNT CARMEL COLLEGE</a></li>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-director">MOUNT CARMEL DIRECTOR’S MESSAGE</a></li>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-founder">ENTRECON GLOBAL FOUNDER’S MESSAGE</a></li>
+                    
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-conference2" onclick="openModal('modal-about-conference2')">ABOUT THE CONFERENCE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-conference2" onclick="openModal('modal-about-conference2')">ABOUT THE CONFERENCE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-global2">ABOUT ENTRECON GLOBAL</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-carmel2">ABOUT MOUNT CARMEL COLLEGE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-director2">MOUNT CARMEL DIRECTOR’S MESSAGE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-founder2">ENTRECON GLOBAL FOUNDER’S MESSAGE</a></li>
                 </ul>
             </div>
             <div>
                 <h3 class="text-lg font-bold mb-4">SCHEDULE</h3>
                 <ul>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-schedule">VIEW SCHEDULE</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-schedule2">VIEW SCHEDULE</a></li>
                 </ul>
             </div>
             <div>
@@ -619,9 +621,9 @@
             <div>
                 <h3 class="text-lg font-bold mb-4">BOOK</h3>
                 <ul>
-                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-grab-pass">GRAB YOUR PASS</a></li>
-                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-book-stall">BOOK YOUR STALL</a></li>
-                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-be-sponsor">BE YOUR SPONSOR</a></li>
+                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-grab-pass2">GRAB YOUR PASS</a></li>
+                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-book-stall2">BOOK YOUR STALL</a></li>
+                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-be-sponsor2">BE YOUR SPONSOR</a></li>
                 </ul>
             </div>
             <div>
@@ -633,7 +635,7 @@
             <div>
                 <h3 class="text-lg font-bold mb-4">PAPER PRESENTATION</h3>
                 <ul>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-paper-presentation">VIEW DETAILS</a></li>
+                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-paper-presentation2">VIEW DETAILS</a></li>
                 </ul>
             </div>
         </div>
@@ -641,6 +643,99 @@
 </footer>
 
 
+
+
+<!-- Modals -->
+<div id="modal-about-conference2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999]">
+    <div class="bg-white rounded-lg p-8 w-[90vw] h-[90vh] mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Conference</h2>
+        <p>Details about the conference...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-conference2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-global2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Global</h2>
+        <p>Details about global...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-global2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-carmel2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Founder</h2>
+        <p>Details about the founder...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-carmel2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-director2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Director</h2>
+        <p>Details about the director...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-director2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-about-founder2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">About Enthusiast</h2>
+        <p>Details about the enthusiast...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-founder2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-schedule2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Schedule</h2>
+        <p>Details about the schedule...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-paper-presentation2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Paper Presentation</h2>
+        <p>Details about the paper presentation...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-paper-presentation2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-grab-pass2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Grab Your Pass</h2>
+        <p>Details about grabbing your pass...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-grab-pass2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-book-stall2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Book Your Stall</h2>
+        <p>Details about booking your stall...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-book-stall2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+<div id="modal-be-sponsor2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
+    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+        <h2 class="text-2xl font-bold mb-4">Be Your Sponsor</h2>
+        <p>Details about being a sponsor...</p>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-be-sponsor2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
 
 
 
@@ -682,6 +777,7 @@
 
     
 <!-- own js -->
+ <script src="script.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

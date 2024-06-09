@@ -74,6 +74,75 @@ const x = setInterval(function() {
 
 
 
+  
+
+
+
+
+
+
+
+// Function to open a modal
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
+
+// Function to close a modal
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+// Add event listeners to close modals when clicking outside modal content
+var modals = document.querySelectorAll('.modal2');
+modals.forEach(function(modal) {
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+// Add event listeners to close modals when clicking the close button
+var closeButtons = document.querySelectorAll('.modal2 .ri-close-line');
+closeButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        var modal = button.closest('.modal2');
+        modal.style.display = 'none';
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------------------
+
+
 // dropdown
 document.addEventListener('DOMContentLoaded', function () {
     const aboutLink = document.getElementById('about-link');
@@ -223,36 +292,4 @@ function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('show');
 }
 
-  
-
-
-
-
-
-
-
-
-
-// footer
-
-// Event listeners for footer dropdowns
-// Event listener for opening modals
-const dropdownItems = document.querySelectorAll('a[data-target]');
-dropdownItems.forEach(item => {
-    item.addEventListener('click', function (event) {
-        event.preventDefault();
-        const modalId = item.getAttribute('data-target');
-        document.getElementById(modalId).classList.add('show'); // Check this line
-    });
-});
-
-// Event listener for closing modals
-const modals = document.querySelectorAll('.modal');
-modals.forEach(modal => {
-    modal.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.classList.remove('show'); // Check this line
-        }
-    });
-});
 

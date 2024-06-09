@@ -119,6 +119,15 @@ footer h3{
 .modal {
     display: none;
 }
+.modal2 {
+    position: fixed;
+    top: auto !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    overflow: auto;
+}
 .modal.show {
     display: flex;
 }
