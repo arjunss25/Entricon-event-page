@@ -31,7 +31,8 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
-locomotiveAnimation()
+// locomotiveAnimation()
+
 
 
 
@@ -72,9 +73,7 @@ const x = setInterval(function() {
 
 
 
-
-
-  
+// ----------------------------------------------------------------
 
 
 
@@ -82,19 +81,21 @@ const x = setInterval(function() {
 
 
 
-// Function to open a modal
+// ---------------------------------------------------------------
+// footer modals
+
+
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "block";
 }
 
-// Function to close a modal
+
 function closeModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "none";
 }
 
-// Add event listeners to close modals when clicking outside modal content
 var modals = document.querySelectorAll('.modal2');
 modals.forEach(function(modal) {
     modal.addEventListener('click', function(event) {
@@ -104,7 +105,7 @@ modals.forEach(function(modal) {
     });
 });
 
-// Add event listeners to close modals when clicking the close button
+
 var closeButtons = document.querySelectorAll('.modal2 .ri-close-line');
 closeButtons.forEach(function(button) {
     button.addEventListener('click', function(event) {
@@ -113,28 +114,7 @@ closeButtons.forEach(function(button) {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ----------------------------------------------------------------
 
 
 
@@ -215,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navLinksMobile.classList.add('hidden');
             setTimeout(() => {
                 navLinksMobile.classList.remove('show');
-            }, 300); // match the transition duration
+            }, 300); 
         }
     });
 
@@ -232,14 +212,14 @@ document.addEventListener('DOMContentLoaded', function () {
     scheduleLinkMobile.addEventListener('click', function (event) {
         event.preventDefault();
         document.getElementById('modal-schedule').classList.add('show');
-        closeMobileMenu(); // Close the mobile menu
+        closeMobileMenu(); 
     });
 
     const paperPresentationLinkMobile = document.getElementById('paper-presentation-link-mobile');
     paperPresentationLinkMobile.addEventListener('click', function (event) {
         event.preventDefault();
         document.getElementById('modal-paper-presentation').classList.add('show');
-        closeMobileMenu(); // Close the mobile menu
+        closeMobileMenu(); 
     });
 
     const bookLinkMobile = document.getElementById('book-link-mobile');
@@ -256,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const modalId = item.getAttribute('data-target');
             document.getElementById(modalId).classList.add('show');
-            closeMobileMenu(); // Close the mobile menu
+            closeMobileMenu(); 
         });
     });
 
@@ -274,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinksMobile.classList.add('hidden');
         setTimeout(() => {
             navLinksMobile.classList.remove('show');
-        }, 300); // match the transition duration
+        }, 300); 
     }
 
     const dropdownItemsMobile = aboutDropdownMobile.querySelectorAll('a[data-target]');
@@ -283,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const modalId = item.getAttribute('data-target');
             document.getElementById(modalId).classList.add('show');
-            closeMobileMenu(); // Close the mobile menu
+            closeMobileMenu(); 
         });
     });
 });
@@ -291,5 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('show');
 }
+
+
 
 

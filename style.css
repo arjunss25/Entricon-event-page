@@ -38,10 +38,7 @@
 
 
 
-
-
-
-.nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text,.name-sec,.coreimg-contents h1,footer h3{
+.nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text,.name-sec,.coreimg-contents h1,footer h3,.obj-title,.Key-hlt,.hlt,.director-para-main{
     font-family: "gilroy-semibold";
 }
 .name-sec,.desig{
@@ -51,13 +48,13 @@
 .main-hero-title{
     font-family: "fredokaregular";
 }
-.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li{
+.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li,.modal-para,.confe-objectives-content{
     font-family: "gilroy-regular";
 }
 .subtitle{
     font-family: "redrose";
 }
-.timer-number,.why-title,.why-box-title,.sponsors-title,.core-team,.anime-content{
+.timer-number,.why-title,.why-box-title,.sponsors-title,.core-team,.anime-content,.modal-title{
     font-family: "gilroy-bold";
 }
 
@@ -106,6 +103,12 @@ footer h3{
     stroke-dashoffset: -32.42;
   }
   
+
+
+
+
+  
+
 
 
 
@@ -184,6 +187,8 @@ footer h3{
 .anime-content:hover .scrolling-content {
     animation-play-state: paused;
 }
+
+
 
 
 
