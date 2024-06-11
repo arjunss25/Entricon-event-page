@@ -38,23 +38,23 @@
 
 
 
-.nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text,.name-sec,.coreimg-contents h1,footer h3,.obj-title,.Key-hlt,.hlt,.director-para-main{
+.nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text,.name-sec,.coreimg-contents h1,footer h3,.obj-title,.Key-hlt,.hlt,.director-para-main,.phase-btn,.event-agenda-day{
     font-family: "gilroy-semibold";
 }
-.name-sec,.desig{
+.name-sec,.desig,.date{
     font-family: "gilroy-medium";
 }
 
 .main-hero-title{
     font-family: "fredokaregular";
 }
-.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li,.modal-para,.confe-objectives-content{
+.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li,.modal-para,.confe-objectives-content,.phase-des-sub,.last-sec{
     font-family: "gilroy-regular";
 }
 .subtitle{
     font-family: "redrose";
 }
-.timer-number,.why-title,.why-box-title,.sponsors-title,.core-team,.anime-content,.modal-title{
+.timer-number,.why-title,.why-box-title,.sponsors-title,.core-team,.anime-content,.modal-title,.phase-txt,.phase-des-title,.event-agenda-date,.main-title-evnt{
     font-family: "gilroy-bold";
 }
 

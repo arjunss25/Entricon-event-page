@@ -1,10 +1,12 @@
+let locoScroll;
+
 // locomotive
 function locomotiveAnimation(){
     gsap.registerPlugin(ScrollTrigger);
 
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-const locoScroll = new LocomotiveScroll({
+locoScroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true
 });
@@ -31,7 +33,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
-// locomotiveAnimation()
+locomotiveAnimation()
 
 
 
@@ -124,6 +126,7 @@ closeButtons.forEach(function(button) {
 
 
 // dropdown
+// dropdown
 document.addEventListener('DOMContentLoaded', function () {
     const aboutLink = document.getElementById('about-link');
     const aboutDropdown = document.getElementById('about-dropdown');
@@ -131,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     aboutLink.addEventListener('click', function (event) {
         event.preventDefault();
         aboutDropdown.classList.toggle('show');
+        locoScroll.stop();
     });
 
     document.addEventListener('click', function (event) {
@@ -152,12 +156,14 @@ document.addEventListener('DOMContentLoaded', function () {
     scheduleLink.addEventListener('click', function (event) {
         event.preventDefault();
         document.getElementById('modal-schedule').classList.add('show');
+        locoScroll.stop();
     });
 
     const paperPresentationLink = document.getElementById('paper-presentation-link');
     paperPresentationLink.addEventListener('click', function (event) {
         event.preventDefault();
         document.getElementById('modal-paper-presentation').classList.add('show');
+        locoScroll.stop();
     });
 
     const bookLink = document.getElementById('book-link');
@@ -180,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const modalId = item.getAttribute('data-target');
             document.getElementById(modalId).classList.add('show');
+            locoScroll.stop();
         });
     });
 
@@ -195,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navLinksMobile.classList.add('hidden');
             setTimeout(() => {
                 navLinksMobile.classList.remove('show');
-            }, 300); 
+            }, 300);
         }
     });
 
@@ -212,14 +219,16 @@ document.addEventListener('DOMContentLoaded', function () {
     scheduleLinkMobile.addEventListener('click', function (event) {
         event.preventDefault();
         document.getElementById('modal-schedule').classList.add('show');
-        closeMobileMenu(); 
+        closeMobileMenu();
+        locoScroll.stop();
     });
 
     const paperPresentationLinkMobile = document.getElementById('paper-presentation-link-mobile');
     paperPresentationLinkMobile.addEventListener('click', function (event) {
         event.preventDefault();
         document.getElementById('modal-paper-presentation').classList.add('show');
-        closeMobileMenu(); 
+        closeMobileMenu();
+        locoScroll.stop();
     });
 
     const bookLinkMobile = document.getElementById('book-link-mobile');
@@ -236,7 +245,8 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const modalId = item.getAttribute('data-target');
             document.getElementById(modalId).classList.add('show');
-            closeMobileMenu(); 
+            closeMobileMenu();
+            locoScroll.stop();
         });
     });
 
@@ -245,6 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.addEventListener('click', function (event) {
             if (event.target === modal) {
                 modal.classList.remove('show');
+                locoScroll.start();
             }
         });
     });
@@ -254,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinksMobile.classList.add('hidden');
         setTimeout(() => {
             navLinksMobile.classList.remove('show');
-        }, 300); 
+        }, 300);
     }
 
     const dropdownItemsMobile = aboutDropdownMobile.querySelectorAll('a[data-target]');
@@ -263,13 +274,15 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const modalId = item.getAttribute('data-target');
             document.getElementById(modalId).classList.add('show');
-            closeMobileMenu(); 
+            closeMobileMenu();
+            locoScroll.stop();
         });
     });
 });
 
 function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('show');
+    locoScroll.start();
 }
 
 

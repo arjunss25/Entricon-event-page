@@ -30,7 +30,7 @@
 
 
 <!--Hero-section-starts  -->
-<div class="Hero-sec w-full h-[120vh] sm:h-[105vh] lg:h-[130vh] bg-red-500 bg-cover bg-center" style="background-image: url(./images/hero-secimg.png);">
+<div class="Hero-sec w-full h-[120vh] sm:h-[105vh] lg:h-[130vh] bg-cover bg-center" style="background-image: url(./images/hero-secimg.png);">
 
     <!-- navbar-section-starts -->
     <div class="navbar w-full h-[12vh] flex items-center px-8 justify-end lg:justify-between">
@@ -256,10 +256,38 @@
         </button>
     </div>
 </div>
-<div id="modal-schedule" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Schedule</h2>
-        <p>Details about the schedule...</p>
+<div id="modal-schedule" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase"><span class="text-[#F1CE72]">EVENT </span> AGENDA</h2>
+        </div>
+        <div class="event-details-main w-full h-auto p-5 flex items-center justify-center">
+            <div  class="event1 w-[80%] h-[80vh] bg-red-100 border-2 border-black rounded-[2vw] overflow-hidden flex lg:flex-row flex-col">
+
+
+
+                <!-- left-sec -->
+                <div class="left-event w-full lg:w-[15vw] h-auto lg:h-full bg-black text-white flex flex-col items-center justify-center lg:px-5 xl:px-10">
+                
+                    <div class="text-cont-event w-full h-auto lg:h-[15%] bg-yellow-100 flex flex-col items-end justify-end">
+                        <h1 class="event-agenda-day text-[1.2rem]">DAY 1</h1>
+                    <h2 class="event-agenda-date text-[#F1CE72] text-[1rem]">SEPTEMBER 24 </h2>
+                    </div>
+
+                    
+                    <div class="event-details flex items-center justify-center w-full h-auto lg:h-[85%] bg-red-100">
+                        <h1 class="main-title-evnt text-[2rem] lg:text-[4rem] text-white rotate-0 lg:rotate-[-90deg] leading-none"><span class="text-[#F1CE72] ">EVENTS</span><br/>
+                            SCHEDULE</h1>
+                    </div>
+                </div>
+
+                <!-- right-sec -->
+                
+                <div class="right-event w-full  lg:w-[85vw] h-auto lg:h-full bg-violet-200">
+
+                </div>
+            </div>
+        </div>
         <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule')">
             <i class="ri-close-line text-2xl"></i>
         </button>
@@ -306,7 +334,7 @@
 
         <!-- contactus-btn -->
         <div class="contact-btn hidden lg:block">
-            <a href="#" class="flex items-center text-[0.8rem] px-4 py-1 gap-3 border-2 border-[#F1CE72] rounded-3xl flex items-center justify-center text-white hover:text-[#F1CE72]">CONTACT US <span><img class="bg-[#F1CE72] px-2 py-1 rounded-md" src="./images/Right.png" alt=""></span></a>
+            <a href="#" class="flex items-center w-[12vw]"><img  src="./images/contactus.svg" alt=""></a>
         </div>
 
     </div>
@@ -761,67 +789,74 @@
 
 
 
-<!-- footer-starts -->
-
-    <div class="footer-main w-full h-auto">
-        <div class="footer-title-sec w-full h-[45vh] bg-[#EFEFEF]">
-            <div class="main-hero-title lg:h-full w-[80%] lg:w-[60vw] flex items-center justify-start pl-5 lg:pl-8">
-                <h1 class="text-[2.5rem] lg:text-[4rem] xl:text-[5rem] leading-none text-black">WORLD’S <span class="text-[#F1CE72]">FIRST</span><br/> GLOBAL STARTUP <br/>ECOSYSTEM</h1>
-            </div>
-        </div>
-
         
 
-        <!-- Footer -->
-<footer class="bg-black text-white py-8 px-4">
-    <div class="container mx-auto">
-        <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
-            <div>
-                <h3 class="text-lg font-bold mb-4">ABOUT</h3>
-                <ul>
-                    
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-conference2" onclick="openModal('modal-about-conference2')">ABOUT THE CONFERENCE</a></li>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-global2" onclick="openModal('modal-about-conference2')">ABOUT ENTRECON GLOBAL</a></li>
-                    
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-carmel2">ABOUT MOUNT CARMEL COLLEGE</a></li>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-director2">MOUNT CARMEL DIRECTOR’S MESSAGE</a></li>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-founder2">ENTRECON GLOBAL FOUNDER’S MESSAGE</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-bold mb-4">SCHEDULE</h3>
-                <ul>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-schedule2">VIEW SCHEDULE</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-bold mb-4">SPEAKERS</h3>
-                <ul>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#">VIEW SPEAKERS</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-bold mb-4">BOOK</h3>
-                <ul>
-                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-grab-pass2">GRAB YOUR PASS</a></li>
-                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-book-stall2">BOOK YOUR STALL</a></li>
-                    <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-be-sponsor2">BE YOUR SPONSOR</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-bold mb-4">PITCH BATTLE</h3>
-                <ul>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#">VIEW DETAILS</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-bold mb-4">PAPER PRESENTATION</h3>
-                <ul>
-                    <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-paper-presentation2">VIEW DETAILS</a></li>
-                </ul>
-            </div>
+
+<!-- footer-starts -->
+
+<div class="footer-main w-full h-auto">
+    <div class="footer-title-sec w-full h-[45vh] bg-[#EFEFEF]">
+        <div class="main-hero-title lg:h-full w-[80%] lg:w-[60vw] flex items-center justify-start pl-5 lg:pl-8 pt-10 lg:pt-0">
+            <h1 class="text-[2.5rem] lg:text-[4rem] xl:text-[5rem] leading-none text-black">WORLD’S <span class="text-[#F1CE72]">FIRST</span><br/> GLOBAL STARTUP <br/>ECOSYSTEM</h1>
         </div>
     </div>
+
+    
+
+    <!-- Footer -->
+<footer class="bg-black text-white pt-8 pb-1 px-4">
+<div class="container mx-auto">
+    <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
+        <div>
+            <h3 class="text-lg font-bold mb-4">ABOUT</h3>
+            <ul>
+                
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-conference2" onclick="openModal('modal-about-conference2')">ABOUT THE CONFERENCE</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-global2" onclick="openModal('modal-about-conference2')">ABOUT ENTRECON GLOBAL</a></li>
+                
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-carmel2">ABOUT MOUNT CARMEL COLLEGE</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-director2">MOUNT CARMEL DIRECTOR’S MESSAGE</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-founder2">ENTRECON GLOBAL FOUNDER’S MESSAGE</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-4">SCHEDULE</h3>
+            <ul>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-schedule2">VIEW SCHEDULE</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-4">SPEAKERS</h3>
+            <ul>
+                <li><a class="text-capitalize text-[0.8rem]" href="#">VIEW SPEAKERS</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-4">BOOK</h3>
+            <ul>
+                <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-grab-pass2">GRAB YOUR PASS</a></li>
+                <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-book-stall2">BOOK YOUR STALL</a></li>
+                <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-be-sponsor2">BE YOUR SPONSOR</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-4">PITCH BATTLE</h3>
+            <ul>
+                <li><a class="text-capitalize text-[0.8rem]" href="#">VIEW DETAILS</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-4">PAPER PRESENTATION</h3>
+            <ul>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-paper-presentation2">VIEW DETAILS</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="last-sec w-full flex items-center justify-center mt-5">
+    <h1 class="text-white text-[1rem]">Copyright © | All rights reserved | Privacy Policy</h1>
+</div>
 </footer>
 
 
@@ -829,129 +864,129 @@
 
 <!-- Modals -->
 <div id="modal-about-conference2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999]">
-    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
-        <div class="modal-title flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
-            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem]">ABOUT THE <span class="text-[#F1CE72]">CONFERENCE</span></h2>
-        </div>
-        
-        <div class="modal-img w-full flex justify-center">
-            <img class="w-[70vw] lg:w-[30vw]" src="./images/about the conference.png" alt="">
-        </div>
-        <div class="modal-para w-full flex justify-center mt-4">
-            <p class="text-justify text-[1rem] w-[90%]">Innovation enhances the creativity and design thinking processes of  organizations, leading to business success. The MCCIIE is hosting a 2-day  International Conference on "Innovation and Entrepreneurship" to bring  together leading academicians, researchers, entrepreneurs, and  organizations to share their experiences and research findings. This  conference will provide an interdisciplinary platform to discuss recent  innovations, trends, and challenges in the fields of innovation and  entrepreneurship</p>
-        </div>
-        <div class="about-confe-objectives">
-            <div class="obj-title mt-4 bg-black w-[80vw] lg:w-[45vw] xl:w-[40vw] h-[8vh] flex items-center justify-start pl-5 rounded-br-xl rounded-tr-xl">
-                <h2 class="lg:text-[1.5rem] xl:text-[2rem] font-bold uppercase text-white"><span class="text-[#F1CE72]">Objectives</span> of the Conference</h2>
-            </div>
-        </div>
-        <div class="confe-objectives-content mt-4 px-10">
-            <h2>1.  Discuss the role of innovation and incubation in entrepreneurship.</h2>
-            <h2>2. Encourage startup culture among students and faculty.</h2>
-            <h2>3. Devise strategies for building a sustainable business model.</h2>
-            <h2>4. Create awareness about government support and industry academia 
-                linkage in promoting entrepreneurial culture</h2>
-        </div>
-
-        <div class="about-key-highlights">
-            <div class="Key-hlt mt-4 bg-black w-[80vw] lg:w-[45vw] xl:w-[40vw] h-[8vh] flex items-center justify-start pl-5 rounded-br-xl rounded-tr-xl">
-                <h2 class="lg:text-[1.5rem] xl:text-[2rem] font-bold uppercase text-white"><span class="text-[#F1CE72]">Key</span> Highlights</h2>
-            </div>
-        </div>
-
-        <div class="confe-objectives-content mt-4 px-10">
-            <h2> <span class="hlt">1. Unveiling Tomorrow's Trends:</span> Our discussions dive into futurefocused  insights that equip attendees with the tools to navigate the evolving  entrepreneurial landscape</h2>
-            <h2><span class="hlt">2. Expert-Led Sessions:</span> Immerse in interactive workshops and talks  delivered by accomplished leaders, offering unparalleled learning  experiences.</h2>
-            <h2><span class="hlt">3. Global Networking:</span> Forge connections with industry titans and peers  from around the globe, creating an ecosystem of collaboration and  mentorship.</h2>
-            <h2><span class="hlt">4. Igniting Creativity:</span> Engage in dialogues that unlock innovative  viewpoints, inspiring attendees to think beyond conventional  boundaries.</h2>
-            <h2><span class="hlt">5. Path to Growth: </span>Equip the attendees with actionable strategies,  unlocking avenues for accelerating business growth and success</h2>
-        </div>
-
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-modal-about-conference2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
+<div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+    <div class="modal-title flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+        <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem]">ABOUT THE <span class="text-[#F1CE72]">CONFERENCE</span></h2>
     </div>
+    
+    <div class="modal-img w-full flex justify-center">
+        <img class="w-[70vw] lg:w-[30vw]" src="./images/about the conference.png" alt="">
+    </div>
+    <div class="modal-para w-full flex justify-center mt-4">
+        <p class="text-justify text-[1rem] w-[90%]">Innovation enhances the creativity and design thinking processes of  organizations, leading to business success. The MCCIIE is hosting a 2-day  International Conference on "Innovation and Entrepreneurship" to bring  together leading academicians, researchers, entrepreneurs, and  organizations to share their experiences and research findings. This  conference will provide an interdisciplinary platform to discuss recent  innovations, trends, and challenges in the fields of innovation and  entrepreneurship</p>
+    </div>
+    <div class="about-confe-objectives">
+        <div class="obj-title mt-4 bg-black w-[80vw] lg:w-[45vw] xl:w-[40vw] h-[8vh] flex items-center justify-start pl-5 rounded-br-xl rounded-tr-xl">
+            <h2 class="lg:text-[1.5rem] xl:text-[2rem] font-bold uppercase text-white"><span class="text-[#F1CE72]">Objectives</span> of the Conference</h2>
+        </div>
+    </div>
+    <div class="confe-objectives-content mt-4 px-10">
+        <h2>1.  Discuss the role of innovation and incubation in entrepreneurship.</h2>
+        <h2>2. Encourage startup culture among students and faculty.</h2>
+        <h2>3. Devise strategies for building a sustainable business model.</h2>
+        <h2>4. Create awareness about government support and industry academia 
+            linkage in promoting entrepreneurial culture</h2>
+    </div>
+
+    <div class="about-key-highlights">
+        <div class="Key-hlt mt-4 bg-black w-[80vw] lg:w-[45vw] xl:w-[40vw] h-[8vh] flex items-center justify-start pl-5 rounded-br-xl rounded-tr-xl">
+            <h2 class="lg:text-[1.5rem] xl:text-[2rem] font-bold uppercase text-white"><span class="text-[#F1CE72]">Key</span> Highlights</h2>
+        </div>
+    </div>
+
+    <div class="confe-objectives-content mt-4 px-10">
+        <h2> <span class="hlt">1. Unveiling Tomorrow's Trends:</span> Our discussions dive into futurefocused  insights that equip attendees with the tools to navigate the evolving  entrepreneurial landscape</h2>
+        <h2><span class="hlt">2. Expert-Led Sessions:</span> Immerse in interactive workshops and talks  delivered by accomplished leaders, offering unparalleled learning  experiences.</h2>
+        <h2><span class="hlt">3. Global Networking:</span> Forge connections with industry titans and peers  from around the globe, creating an ecosystem of collaboration and  mentorship.</h2>
+        <h2><span class="hlt">4. Igniting Creativity:</span> Engage in dialogues that unlock innovative  viewpoints, inspiring attendees to think beyond conventional  boundaries.</h2>
+        <h2><span class="hlt">5. Path to Growth: </span>Equip the attendees with actionable strategies,  unlocking avenues for accelerating business growth and success</h2>
+    </div>
+
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-modal-about-conference2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-about-global2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">About Global</h2>
-        <p>Details about global...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-global2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">About Global</h2>
+    <p>Details about global...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-global2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-about-carmel2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">About Founder</h2>
-        <p>Details about the founder...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-carmel2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">About Founder</h2>
+    <p>Details about the founder...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-carmel2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-about-director2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">About Director</h2>
-        <p>Details about the director...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-director2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">About Director</h2>
+    <p>Details about the director...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-director2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-about-founder2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">About Enthusiast</h2>
-        <p>Details about the enthusiast...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-founder2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">About Enthusiast</h2>
+    <p>Details about the enthusiast...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-founder2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-schedule2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Schedule</h2>
-        <p>Details about the schedule...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">Schedule</h2>
+    <p>Details about the schedule...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-paper-presentation2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Paper Presentation</h2>
-        <p>Details about the paper presentation...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-paper-presentation2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">Paper Presentation</h2>
+    <p>Details about the paper presentation...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-paper-presentation2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-grab-pass2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Grab Your Pass</h2>
-        <p>Details about grabbing your pass...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-grab-pass2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">Grab Your Pass</h2>
+    <p>Details about grabbing your pass...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-grab-pass2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-book-stall2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Book Your Stall</h2>
-        <p>Details about booking your stall...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-book-stall2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">Book Your Stall</h2>
+    <p>Details about booking your stall...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-book-stall2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 <div id="modal-be-sponsor2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Be Your Sponsor</h2>
-        <p>Details about being a sponsor...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-be-sponsor2')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
+<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
+    <h2 class="text-2xl font-bold mb-4">Be Your Sponsor</h2>
+    <p>Details about being a sponsor...</p>
+    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-be-sponsor2')">
+        <i class="ri-close-line text-2xl"></i>
+    </button>
+</div>
 </div>
 
 
@@ -960,9 +995,12 @@
 
 
 
-    </div>
+</div>
 
- <!-- footer-ends -->
+<!-- footer-ends -->
+
+
+
 
 
 
@@ -994,7 +1032,6 @@
 
     
 <!-- own js -->
- <script src="script.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
