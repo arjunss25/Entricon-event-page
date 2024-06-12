@@ -76,3 +76,25 @@ const x = setInterval(function() {
 
 
 // ----------------------------------------------------------------
+ // Mobile Menu Toggle
+ const menuToggle = document.getElementById('menu-toggle');
+ const navLinksMobile = document.querySelector('.nav-links-mobile');
+
+ menuToggle.addEventListener('change', function () {
+     if (menuToggle.checked) {
+         navLinksMobile.classList.remove('hidden');
+         navLinksMobile.classList.add('show');
+     } else {
+         navLinksMobile.classList.add('hidden');
+         setTimeout(() => {
+             navLinksMobile.classList.remove('show');
+         }, 300);
+     }
+ });
+
+
+
+
+
+
+//  

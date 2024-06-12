@@ -38,23 +38,23 @@
 
 
 
-.nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text,.name-sec,.coreimg-contents h1,footer h3,.obj-title,.Key-hlt,.hlt,.director-para-main,.phase-btn,.event-agenda-day{
+.nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text,.name-sec,.coreimg-contents h1,footer h3,.obj-title,.Key-hlt,.hlt,.director-para-main,.phase-btn,.event-agenda-day,.nav-links-mobile{
     font-family: "gilroy-semibold";
 }
-.name-sec,.desig,.date{
+.name-sec,.desig,.date,.speaker{
     font-family: "gilroy-medium";
 }
 
 .main-hero-title{
     font-family: "fredokaregular";
 }
-.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li,.modal-para,.confe-objectives-content,.phase-des-sub,.last-sec{
+.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li,.modal-para,.confe-objectives-content,.phase-des-sub,.last-sec,.event-subdes{
     font-family: "gilroy-regular";
 }
 .subtitle{
     font-family: "redrose";
 }
-.timer-number,.why-title,.why-box-title,.sponsors-title,.core-team,.anime-content,.modal-title,.phase-txt,.phase-des-title,.event-agenda-date,.main-title-evnt{
+.timer-number,.why-title,.why-box-title,.sponsors-title,.core-team,.anime-content,.modal-title,.phase-txt,.phase-des-title,.event-agenda-date,.main-title-evnt,.event-time,.event-subtitle{
     font-family: "gilroy-bold";
 }
 
@@ -187,15 +187,3 @@ footer h3{
 .anime-content:hover .scrolling-content {
     animation-play-state: paused;
 }
-
-
-
-
-
-
-
-
-
-
-
-

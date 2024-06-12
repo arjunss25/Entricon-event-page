@@ -38,7 +38,7 @@
 
 
 <!-- Menu Icon -->
-<div class="menu-icon block lg:hidden p-4">
+<div class="menu-icon block lg:hidden p-4 z-[9999999999999]">
     <label class="hamburger cursor-pointer">
         <input type="checkbox" id="menu-toggle">
         <svg viewBox="0 0 32 32">
@@ -49,18 +49,20 @@
 </div>
 
 <!-- Nav Links for Mobile -->
-<div class="nav-links-mobile bg-gray-800 text-white p-4 hidden lg:hidden absolute w-full top-20 left-0 h-auto z-40">
+<div class="nav-links-mobile bg-gray-800 text-white p-4 hidden lg:hidden absolute w-full top-0 left-0 h-[60vh] z-40">
     
-    <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">CONFERENCE</a>
-    <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS<span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+    <div class="linkings mt-5">
+        <a href="index.html" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">CONFERENCE</a>
+    <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS</a>
     <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
+    </div>
 </div>
 
 <!-- Nav Links for Desktop -->
 <div class="nav-links lg:flex items-center gap-10 text-white hidden lg:block relative">
     
-    <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">CONFERENCE</a>
-    <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS<span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+    <a href="index.html" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">CONFERENCE</a>
+    <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS</a>
     <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
 </div>
 
@@ -251,19 +253,122 @@
 
 <!-- Our-sponsors-section-starts -->
 
-<div class="our-sponsors-main w-full h-auto lg:h-[50vh]">
-    <div class="sponsors-title bg-black h-auto lg:h-[15vh] w-full flex items-center justify-center mt-[10vh] py-1">
-        <h2 class=" text-[2.2rem] lg:text-[3rem] text-white">OUR <span class="text-[#F1CE72]">SPONSORS</span></h2>
-    </div>
+<div class="our-sponsors-main w-full h-auto mt-[10vh]">
+
 
 
     <!-- Sponsor logos -->
-     <div class="sponsor-logos w-full h-auto lg:h-[55vh] bg-white flex lg:flex-row flex-col items-center justify-around py-5 gap-3 lg:gap-0">
-        <img class="w-[40vw] lg:w-[15vw]" src="./images/psynest logo.svg" alt="">
-        <img class="w-[40vw] lg:w-[15vw]" src="./images/dr coaching&consulting logo.svg" alt="">
-        <img class="w-[40vw] lg:w-[15vw]" src="./images/obh-logo.svg" alt="">
-        <img class="w-[40vw] lg:w-[15vw]" src="./images/notechlogo.svg" alt="">
+<!-- Advisory-Body-starts -->
+
+<div class="advisory-body-main w-full h-auto">
+
+    <div class="why-title bg-black h-[17vh] lg:h-[15vh] w-full flex items-center justify-center mt-5 lg:mt-0 px-3 lg:px-0">
+        <h2 class=" text-[2.2rem] lg:text-[3rem] text-white uppercase leading-none"><span class="text-[#F1CE72]">Investment </span>Advisory Board</h2>
+    </div>
+
+
+    <!-- advisory-content-section -->
+     <div class="advisory-content w-full h-auto pt-[5vh] lg:pt-[10vh]  flex flex-col items-center justify-center">
+
+
+        <div class="sec-1 flex items-center justify-around lg:flex-row flex-col mt-[8vh] lg:mt-0">
+
+
+            <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                <img class="w-[70%]" src="./images/gilad 1.png" alt="">
+
+                <div class="name-sec">
+                    <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">Gilad Segev</h3>
+                </div>
+                <div class="desig w-full flex justify-center items-center">
+                    <h2 class="text-black text-[0.8rem] xl:text-[1rem] text-center w-[70%] leading-none">Business Development and<br/>
+                        International Marketing
+                        </h2>
+                </div>
+            </div>
+
+
+            <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                <img class="w-[70%]" src="./images/Group 195.png" alt="">
+
+                <div class="name-sec">
+                    <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">SHIJU BABU
+                    </h3>
+                </div>
+                <div class="desig flex justify-center items-center w-full ">
+                    <h2 class="text-black text-[0.8rem] xl:text-[1rem] text-center leading-none">Founder<br/>
+                        Entrecon Global</h2>
+                </div>
+            </div>
+
+
+            <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                <img class="w-[70%]" src="./images/sreeram1.png" alt="">
+
+                <div class="name-sec">
+                    <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">SREERAM SEKAR</h3>
+                </div>
+                <div class="desig flex justify-center items-center w-full ">
+                    <h2 class="text-black text-[0.8rem] xl:text-[1rem] leading-none text-center w-[60%] uppercase">Chartered Accountant
+                        </h2>
+                </div>
+            </div>
+
+            
+
+            
+        </div>
+
+
+
+        <!-- sec2 -->
+        <div class="sec-2 flex items-center justify-around  lg:flex-row flex-col mt-0 xl:mt-10">
+
+            <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                <img class="w-[70%]" src="./images/praveen.png" alt="">
+
+                <div class="name-sec">
+                    <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">PRAVEEN P
+                    </h3>
+                </div>
+                <div class="desig flex justify-center items-center w-full">
+                    <h2 class="text-black text-[0.8rem] xl:text-[1rem] leading-none text-center w-[60%] uppercase">Chartered Accountant
+                    </h2>
+                </div>
+            </div>
+
+
+            <div class="card1 w-[90vw] lg:w-[30vw] h-[45vh] xl:h-[50vh] flex flex-col items-center justify-start gap-2">
+                <img class="w-[70%]" src="./images/pandey.png" alt="">
+
+                <div class="name-sec">
+                    <h3 class="text-[#F1CE72] w-[60vw] lg:w-[20vw] bg-black px-3 py-1 text-[1.2rem] text-center rounded-full">PRIYANKA PANDYA</h3>
+                </div>
+                <div class="desig flex justify-center items-center w-full">
+                    <h2 class="text-black text-[0.8rem] xl:text-[1rem] text-center leading-none w-[70%]">CEO and Founder of
+                        Finacquis<br/>
+                        Entrepreneur and Investor
+                        </h2>
+                </div>
+            </div>
+            
+        </div>
+       
+
+
      </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -275,7 +380,7 @@
 
 <!-- book-yor-slot-animation-section-starts -->
 
-<div class="book-yourslot-animation w-full h-[20vh] lg:h-[40vh] flex items-center justify-center  z-0">
+<div class="book-yourslot-animation w-full h-[20vh] mb-10 flex items-center justify-center  z-0">
 <div class="anime-content w-full h-[8vh] xl:h-[10vh] bg-[#F1CE72] flex items-center overflow-x-hidden relative">
     <div class="scrolling-content flex items-center">
         <!-- First set of items -->

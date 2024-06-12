@@ -34,7 +34,53 @@ ScrollTrigger.refresh();
 
 }
 locomotiveAnimation()
+// ----------------------------------------------------------------
 
+
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    locoScroll.stop();
+}
+
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+    locoScroll.start();
+}
+
+var modal3 = document.querySelectorAll('.modal3');
+modal3.forEach(function(modal) {
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            locoScroll.start();
+        }
+    });
+});
+
+var closeButtons = document.querySelectorAll('.modal3 .ri-close-line');
+closeButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        var modal = button.closest('.modal3');
+        modal.style.display = 'none';
+        locoScroll.start();
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
 
 
 
@@ -90,12 +136,14 @@ const x = setInterval(function() {
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "block";
+    locoScroll.stop();
 }
 
 
 function closeModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "none";
+    locoScroll.start();
 }
 
 var modals = document.querySelectorAll('.modal2');
@@ -104,6 +152,7 @@ modals.forEach(function(modal) {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
+        locoScroll.start();
     });
 });
 
@@ -117,7 +166,6 @@ closeButtons.forEach(function(button) {
 });
 
 // ----------------------------------------------------------------
-
 
 
 
@@ -288,3 +336,36 @@ function closeModal(modalId) {
 
 
 
+
+
+
+// qty
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.package').forEach(packageElement => {
+        const minusButton = packageElement.querySelector('.minusButton');
+        const plusButton = packageElement.querySelector('.plusButton');
+        const quantityDisplay = packageElement.querySelector('.quantityDisplay');
+        const originalPrice = parseFloat(packageElement.querySelector('.originalPrice').dataset.price);
+        const priceDisplay = packageElement.querySelector('.priceDisplay');
+        let quantity = 1;
+
+        const updatePrice = () => {
+            const newPrice = originalPrice * quantity;
+            priceDisplay.textContent = `₹${newPrice.toFixed(2)}`;
+        };
+
+        minusButton.addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity -= 1;
+                quantityDisplay.textContent = quantity;
+                updatePrice();
+            }
+        });
+
+        plusButton.addEventListener('click', () => {
+            quantity += 1;
+            quantityDisplay.textContent = quantity;
+            updatePrice();
+        });
+    });
+});

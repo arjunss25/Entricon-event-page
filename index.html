@@ -38,7 +38,7 @@
 
 
 <!-- Menu Icon -->
-<div class="menu-icon block lg:hidden p-4">
+<div class="menu-icon block lg:hidden p-4 z-[9999999999999]">
     <label class="hamburger cursor-pointer">
         <input type="checkbox" id="menu-toggle">
         <svg viewBox="0 0 32 32">
@@ -49,9 +49,9 @@
 </div>
 
 <!-- Nav Links for Mobile -->
-<div class="nav-links-mobile bg-gray-800 text-white p-4 hidden lg:hidden absolute w-full top-20 left-0 h-auto z-40">
-    <div class="relative">
-        <a href="#" id="about-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">ABOUT <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+<div class="nav-links-mobile bg-gray-800 rounded-br-lg rounded-bl-lg text-white p-4 hidden lg:hidden absolute w-full top-0 left-0 h-[60vh] z-40">
+    <div class="relative mt-5">
+        <a href="#" id="about-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72] flex items-center">ABOUT <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
         <div id="about-dropdown-mobile" class="dropdown-content bg-gray-700 text-white rounded-lg mt-2 py-2">
             <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-conference">ABOUT THE CONFERENCE</a>
             <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-global">ABOUT ENTRECON GLOBAL</a>
@@ -60,17 +60,16 @@
             <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-about-founder">ENTRECON GLOBAL FOUNDER’S MESSAGE</a>
         </div>
     </div>
-    <a href="#" id="schedule-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">SCHEDULE <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+    <a href="#" id="schedule-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">SCHEDULE</a>
     <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">SPEAKERS</a>
     <div class="relative">
-        <a href="#" id="book-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">BOOK <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
+        <a href="#" id="book-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72] flex items-center">BOOK <span><i class="ri-arrow-drop-down-line text-3xl font-md"></i></span></a>
         <div id="book-dropdown-mobile" class="dropdown-content bg-gray-700 text-white rounded-lg mt-2 py-2">
             <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-grab-pass">GRAB YOUR PASS</a>
             <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-book-stall">BOOK YOUR STALL</a>
-            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-600 uppercase leading-none" data-target="modal-be-sponsor">BE YOUR SPONSOR</a>
         </div>
     </div>
-    <a href="#" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
+    <a href="pitchbattle.html" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
     <a href="#" id="paper-presentation-link-mobile" class="block py-2 text-[0.8rem] hover:text-[#F1CE72]">PAPER PRESENTATION</a>
 </div>
 
@@ -93,14 +92,16 @@
         <div id="book-dropdown" class="dropdown-content absolute bg-gray-800 text-white rounded-lg mt-2 py-2 w-48 shadow-lg">
             <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-grab-pass">GRAB YOUR PASS</a>
             <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-book-stall">BOOK YOUR STALL</a>
-            <a href="#" class="block px-4 py-2 text-[0.8rem] hover:bg-gray-700 uppercase leading-none" data-target="modal-be-sponsor">BE YOUR SPONSOR</a>
         </div>
     </div>
-    <a href="#" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
+    <a href="pitchbattle.html" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PITCH BATTLE</a>
     <a href="#" id="paper-presentation-link" class="flex items-center text-[0.8rem] hover:text-[#F1CE72]">PAPER PRESENTATION</a>
 </div>
 
 <!-- Modals -->
+
+
+<!-- about-conference -->
 <div id="modal-about-conference" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999] ">
     <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
         <div class="modal-title flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
@@ -145,7 +146,7 @@
         </button>
     </div>
 </div>
-
+<!-- ends -->
 
 
 <!-- about-entrecon-global -->
@@ -171,7 +172,7 @@
     </div>
 </div>
 
-
+<!-- ends -->
 <!-- about-mount-carmel -->
 <div id="modal-about-carmel" class="modal fixed inset-0 bg-black bg-opacity-50  items-start justify-center p-4 z-[99999999]">
     <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
@@ -201,6 +202,9 @@
 </div>
 
 
+<!-- ends -->
+
+
 
 <!-- mount-carmel-directors-msg -->
 <div id="modal-about-director" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[999999]">
@@ -227,6 +231,7 @@
         </button>
     </div>
 </div>
+<!-- ends -->
 
 
 
@@ -256,26 +261,33 @@
         </button>
     </div>
 </div>
+<!-- ends -->
+
+
+
+<!-- schedule-starts -->
 <div id="modal-schedule" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[999999]">
-    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[90vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
         <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
             <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase"><span class="text-[#F1CE72]">EVENT </span> AGENDA</h2>
         </div>
-        <div class="event-details-main w-full h-auto p-5 flex items-center justify-center">
-            <div  class="event1 w-[80%] h-[80vh] bg-red-100 border-2 border-black rounded-[2vw] overflow-hidden flex lg:flex-row flex-col">
+        <div class="event-details-main w-full h-auto p-5 flex flex-col gap-10 items-center justify-center">
 
 
+            <!-- day1 -->
+                         <!-- day1 -->
+            <div  class="event1 w-[90%] h-auto border-2 border-black rounded-[2vw] overflow-hidden flex lg:flex-row flex-col">
 
                 <!-- left-sec -->
-                <div class="left-event w-full lg:w-[15vw] h-auto lg:h-full bg-black text-white flex flex-col items-center justify-center lg:px-5 xl:px-10">
+                <div class="left-event w-full lg:w-[15vw] h-auto  bg-black text-white flex flex-col items-center justify-center gap-5 py-5 lg:py-0 px-5 xl:px-10">
                 
-                    <div class="text-cont-event w-full h-auto lg:h-[15%] bg-yellow-100 flex flex-col items-end justify-end">
+                    <div class="text-cont-event w-full h-auto flex flex-col items-end justify-end">
                         <h1 class="event-agenda-day text-[1.2rem]">DAY 1</h1>
                     <h2 class="event-agenda-date text-[#F1CE72] text-[1rem]">SEPTEMBER 24 </h2>
                     </div>
 
                     
-                    <div class="event-details flex items-center justify-center w-full h-auto lg:h-[85%] bg-red-100">
+                    <div class="event-details flex items-center justify-center w-full h-auto lg:h-[80vh]">
                         <h1 class="main-title-evnt text-[2rem] lg:text-[4rem] text-white rotate-0 lg:rotate-[-90deg] leading-none"><span class="text-[#F1CE72] ">EVENTS</span><br/>
                             SCHEDULE</h1>
                     </div>
@@ -283,52 +295,964 @@
 
                 <!-- right-sec -->
                 
-                <div class="right-event w-full  lg:w-[85vw] h-auto lg:h-full bg-violet-200">
+                <div class="right-event w-full  lg:w-[85vw] h-auto lg:h-full lg:p-5 xl:p-10 flex flex-col gap-3">
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>9:00 AM - 11:00 AM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Inauguration and Keynote Address</h2>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Opening remarks by the event  organizers.  
+    
+                                    Keynote speech by a distinguished  guest.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>11:00 AM - 12:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Entrepreneurial Psychological  Attributes</h2>
+                                <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Noona Nafousi</span></h3>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Topics: The importance of  psychological attributes in  entrepreneurship, overcoming mental  barriers, and fostering resilience.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- line-2 -->
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>12:00 AM - 1:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Workshop - Psychological  Strengths for Entrepreneurs</h2>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Interactive activities and discussions on  building mental strength and confidence.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>1:00 PM - 2:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2> Lunch Break</h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- line-3 -->
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>2:00 PM - 3:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Leadership and Communication</h2>
+                                <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Daria Rudnik</span></h3>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Topics: Effective leadership  communication, team dynamics, and  strategies for remote and hybrid  teams.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>3:00 PM - 4:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Workshop - Enhancing Leadership  Skills</h2>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Hands-on activities to improve  communication and leadership abilities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- line-4 -->
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>4:00 PM - 5:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Networking Arena</h2>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>5:00 PM - 5:15 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Q&A and Closing Remarks for Day 1</h2>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
             </div>
+
+
+
+
+                      <!-- day2 -->
+                      <div  class="event1 w-[90%] h-auto border-2 border-black rounded-[2vw] overflow-hidden flex lg:flex-row flex-col">
+
+                        <!-- left-sec -->
+                        <div class="left-event w-full lg:w-[15vw] h-auto  bg-black text-white flex flex-col items-center justify-center gap-5 py-5 lg:py-0 px-5 xl:px-10">
+                        
+                            <div class="text-cont-event w-full h-auto flex flex-col items-end justify-end">
+                                <h1 class="event-agenda-day text-[1.2rem]">DAY 2</h1>
+                            <h2 class="event-agenda-date text-[#F1CE72] text-[1rem]">SEPTEMBER 25 </h2>
+                            </div>
+        
+                            
+                            <div class="event-details flex items-center justify-center w-full h-auto lg:h-[80vh]">
+                                <h1 class="main-title-evnt text-[2rem] lg:text-[4rem] text-white rotate-0 lg:rotate-[-90deg] leading-none"><span class="text-[#F1CE72] ">EVENTS</span><br/>
+                                    SCHEDULE</h1>
+                            </div>
+                        </div>
+        
+                        <!-- right-sec -->
+                        
+                        <div class="right-event w-full  lg:w-[85vw] h-auto lg:h-full lg:p-5 xl:p-10 flex flex-col gap-3">
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+        
+                                <!-- line1 -->
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2>10:00 AM - 11:00 AM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Innovation and Business Model</h2>
+                                        <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Saeed Al Dhaheri</span></h3>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Topics: Innovative business models,  leveraging technology for business  growth, and case studies of successful  innovations.</p>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time text-[1rem] text-[#FF4C00]">
+                                        <h2> 11:00 AM - 11:45 AM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2> Q & A</h2>
+                                        <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Saeed Al Dhaheri</span></h3>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Topics: The importance of  psychological attributes in  entrepreneurship, overcoming mental  barriers, and fostering resilience.</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+        
+        
+                            <!-- line-2 -->
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2> 11:45 AM - 12:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Coffee Break</h2>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time text-[1rem] text-[#FF4C00]">
+                                        <h2>12:00 PM - 1:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2> Session</h2>
+                                        <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Sudha Murthy</span></h3>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Chairperson at Murthy Trusts  MP Rajya Shaba</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <!-- line-3 -->
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2>1:00 PM - 2:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2> Lunch Break</h2>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time text-[1rem] text-[#FF4C00]">
+                                        <h2>2:00 PM - 3:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Panel Discussion and Interactive  Sessions on Case Studies</h2>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Detailed case studies on groundbreaking  startups and interactive group  discussions</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+        
+                            <!-- line-4 -->
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2>3:00 PM - 5:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Valedictory</h2>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Presentation of awards to outstanding  startups and contributors. </p>
+                                        <p class="mt-2">Closing remarks and thank you note  by the organizers.</p>
+                                    </div>
+                                </div>
+        
+        
+                            </div>
+        
+        
+        
+                        </div>
+                    </div>
+        
+        
+
+
+
+
+
+
         </div>
         <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule')">
             <i class="ri-close-line text-2xl"></i>
         </button>
     </div>
 </div>
-<div id="modal-paper-presentation" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Paper Presentation</h2>
-        <p>Details about the paper presentation...</p>
+
+<!-- ends -->
+
+
+<!-- paper-presentation -->
+<div id="modal-paper-presentation" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[99999999999999999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase"><span class="text-[#F1CE72]">PAPER</span> PRESENTATION</h2>
+        </div>
+        
+           <!-- image + paragraph -->
+    <div class="text-center flex flex-col items-center justify-center gap-7">
+        <!-- presenting image-->
+
+        <div class="modal-img w-full flex justify-center mt-10">
+            <img src="./images/conference-stage-speaker-presents-new-product-talks-about-performance-neural-networks-artificial-intelligence-big-data-machine-learning-live-business-event-with-large-audience_861143-1955 1.svg" alt="Presentation" class="w-[70vw] lg:w-[35vw]">
+        </div>
+
+      <!-- paragraph -->
+
+      <div class="modal-para w-full flex justify-center mt-4">
+        <p class="text-justify text-[1rem] w-[90%]">We invite prospective authors to contribute and help shape the conference through submissions of research abstracts, papers, and e-posters. High-quality research contributions describing original and unpublished results in all areas of Innovation and Entrepreneurship are cordially invited.</p>
+    </div>
+    
+    </div>
+    
+
+        <!-- conference sub theme -->
+        <div class="about-confe-objectives">
+            <div class="obj-title mt-4 bg-black w-[80vw] lg:w-[70vw ] xl:w-[60vw] h-[8vh] flex items-center justify-start pl-5 rounded-br-xl rounded-tr-xl">
+                <h2 class="lg:text-[1.5rem] xl:text-[2rem] font-bold uppercase text-white">CONFERENCE <span class="text-[#F1CE72]">SUB THEMES</span> FOR PAPER PRESENTATION</h2>
+            </div>
+        </div>
+
+
+    <div class="list mx-20 text-[1rem] font-[Gilroy-regular] mt-10">
+      <ul class="list-decimal list-outside space-y-2 text-left">
+        <li>Startup culture in India</li>
+        <li>AI and entrepreneurship</li>
+        <li>Role of Innovation/Entrepreneurship in sustainable development</li>
+        <li>The role of innovation in the modern era</li>
+        <li>Social Innovation, Public and Social Good</li>
+        <li>Women Entrepreneurship, Growth and Competitiveness</li>
+        <li>Entrepreneurship and regional development</li>
+        <li>Recent government Policy for promoting Entrepreneurship</li>
+        <li>Corporate and Strategic Entrepreneurship</li>
+        <li>The role of educational institutions in fostering entrepreneurship</li>
+        <li>Green entrepreneurship/Ecopreneurship</li>
+        <li>Innovative strategies for maintaining good customer relationship</li>
+        <li>Entrepreneurship and gender</li>
+        <li>Edutech entrepreneurship / homepreneurs / foodpreneurs / technopreneurs / Biotech entrepreneurship /Sports entrepreneurship/social entrepreneurship /Hustler Entrepreneurship and cyberentrepreneurship</li>
+        <li>Skill development and entrepreneurship</li>
+        <li>IPR</li>
+      </ul>
+
+    </div>
+    <div class="ml-12 flex flex-col items-start ">
+      <p class="text-[1rem] lg:text-[1.5rem] xl:text-[1.7rem] font-[Gilroy-Medium] mb-1 mt-1">Send Your Paper Submission To</p>
+      <a href="mailto:demo@gmail.com" class="text-red-500 text-[1.3rem] font-[Gilroy-Medium underline mb-2">demo@gmail.com</a>
+    </div>
+    
+
+
         <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-paper-presentation')">
             <i class="ri-close-line text-2xl"></i>
         </button>
     </div>
 </div>
-<div id="modal-grab-pass" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Grab Your Pass</h2>
-        <p>Details about grabbing your pass...</p>
+<!-- ends -->
+
+
+<!-- grab-your-pass -->
+<div id="modal-grab-pass" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[999999999999999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase">GRAB YOUR <span class="text-[#F1CE72]">PASS</span></h2>
+        </div>
+
+
+        <!-- content -->
+        <div class="container flex flex-col gap-[3vw]">
+            <div
+                class="w-[40vw]  lg:w-[15vw]  xl:w-[15vw] h-[8vh] mb-[8vw] lg:mb-0 xl:mb-0 domestic text-white flex items-center justify-center rounded-r-xl bg-black font-[Gilroy-Bold] text-[1.5rem]">
+                <h1>Domestic</h1>
+            </div>
+
+            <!-- Package-1 -->
+            <div class="package w-full flex items-center justify-center">
+                <!-- box1 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[45vh] xl:h-[40vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-around">
+
+                        <ul class=" mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black mb-4">Student</h3>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-5 h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to entire exhibition</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-9 lg:w-5 h-9 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to 2 day pass for panel discussion and
+                                    keynote speaker</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-6 lg:w-5 h-6 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Chance to network with startups PAN India</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col items-center space-x-2">
+                            <p class="text-[1rem]">Quantity</p>
+                            <div class="quantity">
+                                <button 
+                                    class="minusButton text-black font-[Gilroy-semibold] lg:px-2  xl:px-4 lg:py-1 xlpy-2 rounded text-[1.5rem]">-</button>
+                                <span
+                                    class="quantityDisplay bg-gray-300 rounded-lg font-[Gilroy-semibold] px-5 lg:px-5 xl:px-5 py-1 text-[1rem]">1</span>
+                                <button
+                                    class="plusButton text-black font-[Gilroy-semibold]  lg:px-2  xl:px-4 lg:py-1 xl:py-2  rounded text-[1.5rem] ">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;3000.00</span>
+                                <span class="originalPrice hidden" data-price="1500"></span>
+                            <span  class="priceDisplay text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;1500.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[64vw] lg:w-[72vw]  xl:w-[67vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package-2 -->
+            <div class="package w-full flex items-center justify-center">
+                <!-- box2 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[45vh] xl:h-[40vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-around">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black mb-4">
+                                    Academicians/Research Scholars/Teachers</h3>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to entire exhibition</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-9 lg:w-5 h-9 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to 2 day pass for panel discussion and
+                                    keynote speaker</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-6 lg:w-5 h-6 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Chance to network with startups PAN India</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col items-center space-x-2">
+                            <p class="text-[1rem]">Quantity</p>
+                            <div class="quantity">
+                                <button
+                                    class="minusButton text-black font-[Gilroy-semibold] lg:px-2  xl:px-4 lg:py-1 xlpy-2 rounded text-[1.5rem]">-</button>
+                                <span
+                                    class="quantityDisplay bg-gray-300 rounded-lg font-[Gilroy-semibold] px-5  lg:px-5 xl:px-5 py-1 text-[1rem]">1</span>
+                                <button
+                                    class="plusButton text-black font-[Gilroy-semibold]  lg:px-2  xl:px-4 lg:py-1 xl:py-2  rounded text-[1.5rem] ">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;5000.00</span>
+                                <span class="originalPrice hidden" data-price="3000"></span>
+                            <span class="priceDisplay text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;3000.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[64vw] lg:w-[72vw]  xl:w-[67vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package-3 -->
+            <div class="package lg:w-full  xl:w-full flex items-center justify-center">
+                <!-- box3 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[45vh] xl:h-[40vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-around">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black mb-4">Entrepreneurs &
+                                    Others</h3>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to entire exhibition</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-9 lg:w-5 h-9 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to 2 day pass for panel discussion and
+                                    keynote speaker</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-6 lg:w-5 h-6 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Chance to network with startups PAN India</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col items-center space-x-2">
+                            <p class="text-[1rem]">Quantity</p>
+                            <div class="quantity">
+                                <button
+                                    class="minusButton text-black font-[Gilroy-semibold] lg:px-2  xl:px-4 lg:py-1 xl:py-2 rounded text-[1.5rem]">-</button>
+                                <span
+                                    class="quantityDisplay bg-gray-300 rounded-lg font-[Gilroy-semibold] px-5 lg:px-5 xl:px-5 py-1 text-[1rem]">1</span>
+                                <button 
+                                    class="plusButton text-black font-[Gilroy-semibold]  lg:px-2  xl:px-4 lg:py-1 xl:py-2  rounded text-[1.5rem] ">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;7000.00</span>
+                                <span class="originalPrice hidden" data-price="3500"></span>
+                            <span class=" priceDisplay text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;3500.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[62vw] lg:w-[72vw] xl:w-[67vw] py-5 flex items-center justify-end">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Inernational -->
+            <div
+                class="w-[40vw]  lg:w-[15vw]  xl:w-[15vw] h-[8vh] my-[8vw] lg:my-0 xl:my-0 domestic text-white flex items-center justify-center rounded-r-xl bg-black font-[Gilroy-Bold] text-[1.5rem]">
+                <h1>International</h1>
+            </div>
+
+            <!-- Package-4 -->
+            <div class="package w-full flex items-center justify-center">
+                <!-- box4 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[45vh] xl:h-[40vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-around">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black mb-4">Student</h3>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to entire exhibition</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-9 lg:w-5 h-9 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to 2 day pass for panel discussion and
+                                    keynote speaker</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-6 lg:w-5 h-6 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Chance to network with startups PAN India</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col items-center space-x-2">
+                            <p class="text-[1rem]">Quantity</p>
+                            <div class="quantity">
+                                <button
+                                    class="minusButton text-black font-[Gilroy-semibold] lg:px-2  xl:px-4 lg:py-1 xlpy-2 rounded text-[1.5rem]">-</button>
+                                <span
+                                    class="quantityDisplay bg-gray-300 rounded-lg font-[Gilroy-semibold] px-5 lg:px-5 xl:px-5 py-1 text-[1rem]">1</span>
+                                <button
+                                    class="plusButton text-black font-[Gilroy-semibold]  lg:px-2  xl:px-4 lg:py-1 xl:py-2  rounded text-[1.5rem] ">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;100.00</span>
+                                <span class="originalPrice hidden" data-price="30"></span>
+                            <span class="priceDisplay text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;30.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[64vw] lg:w-[72vw]  xl:w-[67vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package-5 -->
+            <div class="package w-full flex items-center justify-center">
+                <!-- box5 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[45vh] xl:h-[40vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-around">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black mb-4">
+                                    Academicians/Research Scholars/Teachers</h3>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to entire exhibition</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-9 lg:w-5 h-9 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to 2 day pass for panel discussion and
+                                    keynote speaker</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-6 lg:w-5 h-6 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Chance to network with startups PAN India</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col items-center space-x-2">
+                            <p class="text-[1rem]">Quantity</p>
+                            <div class="quantity">
+                                <button
+                                    class="minusButton text-black font-[Gilroy-semibold] lg:px-2  xl:px-4 lg:py-1 xlpy-2 rounded text-[1.5rem]">-</button>
+                                <span
+                                    class="quantityDisplay bg-gray-300 rounded-lg font-[Gilroy-semibold] px-5  lg:px-5 xl:px-5 py-1 text-[1rem]">1</span>
+                                <button
+                                    class="plusButton text-black font-[Gilroy-semibold]  lg:px-2  xl:px-4 lg:py-1 xl:py-2  rounded text-[1.5rem] ">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;100.00</span>
+                                <span class="originalPrice hidden" data-price="45"></span>
+                            <span class="priceDisplay text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;45.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[64vw] lg:w-[72vw]  xl:w-[67vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package-6 -->
+            <div class="package lg:w-full  xl:w-full flex items-center justify-center">
+                <!-- box6 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[45vh] xl:h-[40vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-around">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black mb-4">Entrepreneurs &
+                                    Others</h3>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to entire exhibition</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-9 lg:w-5 h-9 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to 2 day pass for panel discussion and
+                                    keynote speaker</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-6 lg:w-5 h-6 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Chance to network with startups PAN India</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col items-center space-x-2">
+                            <p class="text-[1rem]">Quantity</p>
+                            <div class="quantity">
+                                <button
+                                    class="minusButton text-black font-[Gilroy-semibold] lg:px-2  xl:px-4 lg:py-1 xl:py-2 rounded text-[1.5rem]">-</button>
+                                <span
+                                    class="quantityDisplay bg-gray-300 rounded-lg font-[Gilroy-semibold] px-5 lg:px-5 xl:px-5 py-1 text-[1rem]">1</span>
+                                <button
+                                    class="plusButton text-black font-[Gilroy-semibold]  lg:px-2  xl:px-4 lg:py-1 xl:py-2  rounded text-[1.5rem] ">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;100.00</span>
+                                <span class="originalPrice hidden" data-price="60"></span>
+                            <span class="priceDisplay text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;60.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[62vw] lg:w-[72vw] xl:w-[67vw] py-5 flex items-center justify-end">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Stalls -->
+            <div
+                class="w-[40vw]  lg:w-[15vw]  xl:w-[15vw] h-[8vh] my-[8vw] lg:my-0 xl:my-0 domestic text-white flex items-center justify-center rounded-r-xl bg-black font-[Gilroy-Bold] text-[1.5rem]">
+                <h1>Stalls</h1>
+            </div>
+
+            <!-- Package-7 -->
+            <div class="package w-full flex items-center justify-center">
+                <!-- box7 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[45vh] xl:h-[40vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-around">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black mb-4">Startup Stall</h3>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to entire exhibition</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-9 lg:w-5 h-9 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Access to 2 day pass for panel discussion and
+                                    keynote speaker</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img class="w-6 lg:w-5 h-6 lg:h-5" src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Chance to network with startups PAN India</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col items-center space-x-2">
+                            <p class="text-[1rem]">Quantity</p>
+                            <div class="quantity">
+                                <button
+                                    class="minusButton text-black font-[Gilroy-semibold] lg:px-2  xl:px-4 lg:py-1 xlpy-2 rounded text-[1.5rem]">-</button>
+                                <span 
+                                    class=" quantityDisplay bg-gray-300 rounded-lg font-[Gilroy-semibold] px-5 lg:px-5 xl:px-5 py-1 text-[1rem]">1</span>
+                                <button 
+                                    class="plusButton text-black font-[Gilroy-semibold]  lg:px-2  xl:px-4 lg:py-1 xl:py-2  rounded text-[1.5rem] ">+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;1500000.00</span>
+                                <span class="originalPrice hidden" data-price="100000"></span>
+                            <span class="priceDisplay text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;100000.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[64vw] lg:w-[72vw]  xl:w-[67vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--   -->
+
+
+        </div>
+
+
+
+
+
         <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-grab-pass')">
             <i class="ri-close-line text-2xl"></i>
         </button>
     </div>
 </div>
-<div id="modal-book-stall" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Book Your Stall</h2>
-        <p>Details about booking your stall...</p>
+<!-- ends -->
+
+
+
+<!-- book-your-stall -->
+<div id="modal-book-stall" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999999999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase">BOOK YOUR <span class="text-[#F1CE72]">STALL</span></h2>
+        </div>
+
+
+
+
+
+        <!-- content -->
+
+        <div class="container flex flex-col gap-[3vw] mt-10">
+
+
+            <!-- Package-1 -->
+            <div class="packag1 w-full flex items-center justify-center">
+                <!-- box1 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[55vh] xl:h-[50vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-between px-[3vw]">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black">BOOK YOUR STALL</h3>
+                                <h3 class="text-[1rem] font-[Gilroy-Medium] text-[#03A800] mb-4">Size: 6.5 x 6.5 x 8 feet
+                                </h3>
+                            </li>
+                             
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">3 lights + 3 Chairs per Stall</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Front facia branding</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">50 inch plasma tv with stand</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Vinyl printing on all the walls</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Food Coupons worth Rs. 3500/-</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;75000.00</span>
+                            <span class="text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;6500.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[62vw] lg:w-[70vw]  xl:w-[66vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package-2 -->
+            <div class="packag1 w-full flex items-center justify-center">
+                <!-- box2 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[55vh] xl:h-[50vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-between px-[3vw]">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black">INVESTORS ARENA</h3>
+                                <h3 class="text-[1rem] font-[Gilroy-Medium] text-[#03A800] mb-4">Size : 10 x 6.5 x 8 feet
+                                </h3>
+                            </li>
+                             
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">3 lights + 3 Chairs per Stall</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Front facia branding</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">50 inch plasma tv with stand</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Vinyl printing on all the walls</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Food Coupons worth Rs. 3500/-</span>
+                            </li>
+                        </ul>
+
+                         
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;75000.00</span>
+                            <span class="text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;8500.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[62vw] lg:w-[70vw]  xl:w-[66vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Package-3 -->
+             
+
+
+             
+            <!--   -->
+
+
+        </div>
+
+
+
         <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-book-stall')">
             <i class="ri-close-line text-2xl"></i>
         </button>
     </div>
 </div>
-<div id="modal-be-sponsor" class="modal fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-    <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-        <h2 class="text-2xl font-bold mb-4">Be Your Sponsor</h2>
-        <p>Details about being a sponsor...</p>
-        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-be-sponsor')">
-            <i class="ri-close-line text-2xl"></i>
-        </button>
-    </div>
-</div>
+<!-- ends -->
 
 
 
@@ -442,20 +1366,38 @@
 
 
 
-    <div class="why-content-sec w-full h-[70vh] lg:h-[35vh] flex lg:flex-row flex-col items-center justify-center">
-
-        <div class="why-content-left w-full lg:w-[40vw] h-[50vh] lg:h-[35vh] flex flex-col items-start justify-center pl-8">
-            <h5 class="text-[1.2rem]"><span>⦿</span> Exposure to new trends and emerging technologies</h5>
-            <h5 class="text-[1.2rem]"><span>⦿</span> Opportunity to pitch your own startup</h5>
-            <h5 class="text-[1.2rem]"><span>⦿</span> Chance to attend panels on relevant topics</h5>
+    <div class="why-content-sec w-full h-auto lg:h-[35vh] flex lg:flex-row flex-col items-center justify-center gap-8 lg:gap-0 py-8 lg:py-0">
+        <div class="why-content-left w-full lg:w-[40vw] flex flex-col items-start justify-center px-8 lg:pl-8 gap-4 lg:gap-6">
+            <div class="flex items-start mb-4 lg:mb-0">
+                <span class="text-[1.2rem] mr-2 ">⦿</span>
+                <h5 class="text-[1.2rem]">Exposure to new trends and emerging technologies</h5>
+            </div>
+            <div class="flex items-start mb-4 lg:mb-0">
+                <span class="text-[1.2rem] mr-2 ">⦿</span>
+                <h5 class="text-[1.2rem]">Opportunity to pitch your own startup</h5>
+            </div>
+            <div class="flex items-start mb-4 lg:mb-0">
+                <span class="text-[1.2rem] mr-2 ">⦿</span>
+                <h5 class="text-[1.2rem]">Chance to attend panels on relevant topics</h5>
+            </div>
         </div>
-
-        <div class="why-content-left w-full lg:w-[40vw] h-[40vh] lg:h-[35vh] flex flex-col items-start justify-start lg:justify-center pl-8">
-            <h5 class="text-[1.2rem]"><span>⦿</span> Exposure to new trends and emerging technologies</h5>
-            <h5 class="text-[1.2rem]"><span>⦿</span> Opportunity to pitch your own startup</h5>
-            <h5 class="text-[1.2rem]"><span>⦿</span> Chance to attend panels on relevant topics</h5>
+    
+        <div class="why-content-left w-full lg:w-[40vw] flex flex-col items-start justify-start lg:justify-center px-8 lg:pl-8 gap-4 lg:gap-6">
+            <div class="flex items-start mb-4 lg:mb-0">
+                <span class="text-[1.2rem] mr-2 ">⦿</span>
+                <h5 class="text-[1.2rem]">Networking with industry leaders and experts</h5>
+            </div>
+            <div class="flex items-start mb-4 lg:mb-0">
+                <span class="text-[1.2rem] mr-2 ">⦿</span>
+                <h5 class="text-[1.2rem]">Hands-on workshops and training sessions</h5>
+            </div>
+            <div class="flex items-start">
+                <span class="text-[1.2rem] mr-2">⦿</span>
+                <h5 class="text-[1.2rem]">Access to exclusive resources and tools</h5>
+            </div>
         </div>
     </div>
+    
 
 
 
@@ -468,9 +1410,49 @@
                 <p class="why-box-para text-white text-[1rem]">Explore Panels, Network & Invest in Startups</p>
             </div>
 
-            <div class="box-btn">
+            <!-- <div class="box-btn">
                 <img class="w-[70%] cursor-pointer" src="./images/grabbtn.svg" alt="">
-            </div>
+            </div> -->
+
+
+            <!-- New Button -->
+           
+<div class="box-btn">
+    <img class="w-[70%] cursor-pointer" src="./images/grabbtn.svg" alt="" onclick="openModal('modal-about-conference3')">
+</div>
+
+<!-- New Modal -->
+
+
+<div id="modal-about-conference3" class="modal3 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999]" style="display: none;">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative">
+        <div class="modal-title flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem]">ANOTHER <span class="text-[#F1CE72]">MODAL</span></h2>
+        </div>
+        
+        <div class="modal-img w-full flex justify-center">
+            <img class="w-[70vw] lg:w-[30vw]" src="./images/about the conference.png" alt="">
+        </div>
+        <div class="modal-para w-full flex justify-center mt-4">
+            <p class="text-justify text-[1rem] w-[90%]">This is another modal with the same style but different content.</p>
+        </div>
+        
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-conference3')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
 
@@ -480,8 +1462,8 @@
                 <p class="why-box-para text-white text-[1rem] leading-none">Maximize Your Exposure – Book a Stall and Showcase Your Ideas at Our Event Now!</p>
             </div>
 
-            <div class="box-btn">
-                <img class="w-[70%] cursor-pointer" src="./images/bookbtn.svg" alt="">
+            <div class="box-btn" data-target="modal-book-stall">
+                <img class="w-[70%] cursor-pointer"  src="./images/bookbtn.svg" alt="" data-target="modal-book-stall">
             </div>
         </div>
         
@@ -599,85 +1581,54 @@
 
 <!-- Advisory-Body-ends -->
 
-
 <!-- Speakers-section-starts -->
 <div class="speakers w-full h-auto pb-10 flex flex-col items-center justify-center">
-
     <!-- Heading - Distinguished Speakers -->
     <div class="speakers w-full h-[15vh] bg-black flex flex-col items-center justify-center font-[Gilroy-Bold]">
-        <h1 class="text-white text-[1.6rem] lg:text-[3rem] w-full text-center">DISTINGUISHED <span
-                class="text-[#F1CE72]">SPEAKERS</span></h1>
+        <h1 class="text-white text-[1.6rem] lg:text-[3rem] w-full text-center">DISTINGUISHED <span class="text-[#F1CE72]">SPEAKERS</span></h1>
     </div>
-    <!-- body section after Title -->
-    <div class="container w-[82vw] h-full flex flex-col items-center justify-center py-16 gap-6 ">
-        <div
-            class="box1 w-[70vw] lg:w-[89vw] xl:w-[70vw]  h-[75vh] lg:h-[50vh] xl:h-[39vh] flex flex-col lg:flex-row items-center justify-around rounded-3xl gap-0 lg:gap-[4vw] xl:gap-[1vw] bg-[#EFEFEF] py-5 ">
-            <div class="box_a w-[60vw] lg:w-[17vw] h-[43vh] xl:h-full flex flex-col items-center justify-center gap-2 ">
-                <img class="w-[40vw] lg:w-[15vw] xl:w-[9vw]" src="./images/speaker1.svg" alt="">
-                <div class="name w-[50vw] lg:w-[17vw] xl:w-[13vw] text-center bg-black rounded-3xl text-[#F1CE72] font-[Gilroy-Bold] text-[1rem] ">
+    <!-- Body section after Title -->
+    <div class="container w-[90vw] xl:w-[80vw] h-full flex flex-col items-center justify-center py-16 gap-10">
+        <div class="box1 w-full h-auto flex flex-col lg:flex-row items-center justify-between rounded-3xl gap-6 lg:gap-10 bg-[#EFEFEF] p-8 lg:p-10">
+            <div class="box_a w-full lg:w-[20vw] flex flex-col items-center justify-center gap-4">
+                <img class="w-[50vw] lg:w-[12vw]" src="./images/speaker1.svg" alt="">
+                <div class="name w-full text-center bg-black rounded-3xl text-[#F1CE72] font-[Gilroy-Bold] text-[1rem] p-2">
                     <h1>NOONA NAFOUSI</h1>
                 </div>
-                <h3 class="sub-head w-[50vw] lg:w-[15vw] xl:w-[12vw] text-center text-[0.7rem] lg:text-[0.9rem] leading-5 font-[Gilroy-regular] leading-none">FOUNDER
-                    Neo
-                    Noor
-                    CORPORATE COACH
-                    1:1 BUSINESS MENTOR</h3>
+                <h3 class="sub-head w-full text-center text-[0.8rem] lg:text-[1rem] font-[Gilroy-Regular] leading-tight">FOUNDER Neo Noor CORPORATE COACH 1:1 BUSINESS MENTOR</h3>
             </div>
-            <div class="box_b w-[60vw] lg:[60vw] xl:w-[45vw] h-[32vh] lg:h-auto xl:h-auto text-[0.9rem] font-[Gilroy-Medium] text-justify ">
-                <p class="para">With over 22 years of experience in the world of headhunting, Noona has honed the
-                    art of identifying talent and helping individuals realize their true potential. Noona has been
-                    on a mission to empower others with the knowledge and tools necessary to achieve their goals and
-                    transform their lives</p>
+            <div class="box_b w-full lg:w-[60%] text-[1rem] font-[Gilroy-Medium] text-justify">
+                <p class="para">With over 22 years of experience in the world of headhunting, Noona has honed the art of identifying talent and helping individuals realize their true potential. Noona has been on a mission to empower others with the knowledge and tools necessary to achieve their goals and transform their lives.</p>
             </div>
-
         </div>
-
-
-        <div
-            class="box2 w-[70vw] lg:w-[89vw] xl:w-[70vw] h-[87vh] lg:h-[48vh] xl:h-[39vh] flex flex-col lg:flex-row items-center justify-around rounded-3xl gap-0 lg:gap-[4vw] xl:gap-[1vw]  bg-[#EFEFEF] py-5">
-
-            <div class="box_d w-[60vw] lg:w-[17vw] h-[55vh] xl:h-full flex flex-col items-center justify-center gap-2 ">
-                <img class="w-[40vw] lg:w-[15vw] xl:w-[9vw]" src="./images/speaker2.svg" alt="">
-                <div class="name w-[50vw] lg:w-[17vw] xl:w-[13vw] text-center bg-black rounded-3xl text-[#F1CE72] font-[Gilroy-Bold] text-[1rem] ">
+        <div class="box2 w-full h-auto flex flex-col lg:flex-row items-center justify-between rounded-3xl gap-6 lg:gap-10 bg-[#EFEFEF] p-8 lg:p-10">
+            <div class="box_d w-full lg:w-[20vw] flex flex-col items-center justify-center gap-4">
+                <img class="w-[50vw] lg:w-[12vw]" src="./images/speaker2.svg" alt="">
+                <div class="name w-full text-center bg-black rounded-3xl text-[#F1CE72] font-[Gilroy-Bold] text-[1rem] p-2">
                     <h1>DARIA RUDNIK</h1>
                 </div>
-                <h3 class="sub-head w-[50vw] lg:w-[15vw] xl:w-[14vw] text-center text-[0.7rem] lg:text-[0.9rem] leading-5 font-[Gilroy-regular] leading-none"> FOUNDER AND CEO aidra.ai
-                    LEADERSHIP COACH ARCHITECT</h3>
+                <h3 class="sub-head w-full text-center text-[0.8rem] lg:text-[1rem] font-[Gilroy-Regular] leading-tight">FOUNDER AND CEO aidra.ai LEADERSHIP COACH ARCHITECT</h3>
             </div>
-            <div class="box_c w-[60vw] lg:w-[60vw] xl:w-[45vw] h-[45vh] lg:h-auto xl:h-auto text-[0.9rem] font-[Gilroy-Medium] text-justify pb-[5vh] lg:pb-0 xl:pb-0">
-                <p class="para">Daria Rudnik is a team architect and leadership coach, and the Founder and CEO of
-                    aidra.ai. An ex Deloitte consultant, she has built high-performing cultures for over 5,000
-                    people in startups and Fortune 500 companies. Daria transformed a B2G startup’s sales team,
-                    quadrupled a telecom company's growth, and led a hardware company to retail tech leadership. She
-                    is dedicated to fostering innovation, agility, and accountability in the workplace</p>
+            <div class="box_c w-full lg:w-[60%] text-[1rem] font-[Gilroy-Medium] text-justify">
+                <p class="para">Daria Rudnik is a team architect and leadership coach, and the Founder and CEO of aidra.ai. An ex Deloitte consultant, she has built high-performing cultures for over 5,000 people in startups and Fortune 500 companies. Daria transformed a B2G startup’s sales team, quadrupled a telecom company's growth, and led a hardware company to retail tech leadership. She is dedicated to fostering innovation, agility, and accountability in the workplace.</p>
             </div>
         </div>
-
-
-        <div class="box3 w-[70vw] lg:w-[89vw] xl:w-[70vw] h-[88vh] lg:h-[55vh] xl:h-[39vh] flex flex-col lg:flex-row items-center justify-around rounded-3xl lg:gap-[4vw] xl:gap-[1vw] bg-[#EFEFEF]  py-5">
-            <div class="box_e w-[60vw] lg:w-[17vw] h-[54vh] xl:h-full flex flex-col items-center justify-center gap-2  ">
-                <img class="w-[40vw] lg:w-[15vw] xl:w-[9vw]" src="./images/speaker3.svg" alt="">
-                <div class="name w-[50vw] lg:w-[17vw] xl:w-[13vw] text-center bg-black rounded-3xl text-[#F1CE72]  font-[Gilroy-Bold] text-[1rem]">
+        <div class="box3 w-full h-auto flex flex-col lg:flex-row items-center justify-between rounded-3xl gap-6 lg:gap-10 bg-[#EFEFEF] p-8 lg:p-10">
+            <div class="box_e w-full lg:w-[20vw] flex flex-col items-center justify-center gap-4">
+                <img class="w-[50vw] lg:w-[12vw]" src="./images/speaker3.svg" alt="">
+                <div class="name w-full text-center bg-black rounded-3xl text-[#F1CE72] font-[Gilroy-Bold] text-[1rem] p-2">
                     <h1>SAEED AL DHAHERI</h1>
                 </div>
-                <h3 class="sub-head w-[50vw] lg:w-[15vw] xl:w-[15vw] text-center text-[0.7rem] lg:text-[0.9rem] leading-5 font-[Gilroy-regular] leading-none"> DIRECTOR
-                    CENTER FOR FUTURE STUDIES UNIVERSITY OF DUBAI UNESCO CO-CHAIR</h3>
+                <h3 class="sub-head w-full text-center text-[0.8rem] lg:text-[1rem] font-[Gilroy-Regular] leading-tight">DIRECTOR CENTER FOR FUTURE STUDIES UNIVERSITY OF DUBAI UNESCO CO-CHAIR</h3>
             </div>
-            <div class="box_f w-[60vw] lg:w-[60vw] xl:w-[45.5vw] h-[50vh] lg:h-auto xl:h-auto  font-[Gilroy-Medium] text-[0.9rem] text-justify ">
-                <p class="para">Dr. Saeed Al Dhaheri is a renowned AI ethicist and thought leader. He was the first
-                    Emirati in an international space program at MIT. He founded the Emirates Identity Authority,
-                    developed the UAE national smart ID card, and implemented a global WAN for the UAE Ministry of
-                    Foreign Affairs. He advises on digital transformation and speaks at top platforms like the
-                    University of Oxford and the World Economic Forum.</p>
+            <div class="box_f w-full lg:w-[60%] text-[1rem] font-[Gilroy-Medium] text-justify">
+                <p class="para">Dr. Saeed Al Dhaheri is a renowned AI ethicist and thought leader. He was the first Emirati in an international space program at MIT. He founded the Emirates Identity Authority, developed the UAE national smart ID card, and implemented a global WAN for the UAE Ministry of Foreign Affairs. He advises on digital transformation and speaks at top platforms like the University of Oxford and the World Economic Forum.</p>
             </div>
-
         </div>
     </div>
-
-
 </div>
-
 <!-- Speakers-section-ends -->
+
 
 
 
@@ -812,17 +1763,16 @@
             <ul>
                 
                 <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-conference2" onclick="openModal('modal-about-conference2')">ABOUT THE CONFERENCE</a></li>
-                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-global2" onclick="openModal('modal-about-conference2')">ABOUT ENTRECON GLOBAL</a></li>
-                
-                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-carmel2">ABOUT MOUNT CARMEL COLLEGE</a></li>
-                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-director2">MOUNT CARMEL DIRECTOR’S MESSAGE</a></li>
-                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-founder2">ENTRECON GLOBAL FOUNDER’S MESSAGE</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-global2" onclick="openModal('modal-about-global2')">ABOUT ENTRECON GLOBAL</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-carmel2" onclick="openModal('modal-about-carmel2')">ABOUT MOUNT CARMEL COLLEGE</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-director2" onclick="openModal('modal-about-director2')">MOUNT CARMEL DIRECTOR’S MESSAGE</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-about-founder2" onclick="openModal('modal-about-founder2')">ENTRECON GLOBAL FOUNDER’S MESSAGE</a></li>
             </ul>
         </div>
         <div>
             <h3 class="text-lg font-bold mb-4">SCHEDULE</h3>
             <ul>
-                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-schedule2">VIEW SCHEDULE</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-schedule2" onclick="openModal('modal-schedule2')">VIEW SCHEDULE</a></li>
             </ul>
         </div>
         <div>
@@ -834,28 +1784,27 @@
         <div>
             <h3 class="text-lg font-bold mb-4">BOOK</h3>
             <ul>
-                <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-grab-pass2">GRAB YOUR PASS</a></li>
-                <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-book-stall2">BOOK YOUR STALL</a></li>
-                <li><a class="text-capitalize text-[0.8rem] " href="#" data-target="modal-be-sponsor2">BE YOUR SPONSOR</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-grab-pass2" onclick="openModal('modal-grab-pass2')">GRAB YOUR PASS</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-book-stall2" onclick="openModal('modal-book-stall2')">BOOK YOUR STALL</a></li>
             </ul>
         </div>
         <div>
             <h3 class="text-lg font-bold mb-4">PITCH BATTLE</h3>
             <ul>
-                <li><a class="text-capitalize text-[0.8rem]" href="#">VIEW DETAILS</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="pitchbattle.html">VIEW DETAILS</a></li>
             </ul>
         </div>
         <div>
             <h3 class="text-lg font-bold mb-4">PAPER PRESENTATION</h3>
             <ul>
-                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-paper-presentation2">VIEW DETAILS</a></li>
+                <li><a class="text-capitalize text-[0.8rem]" href="#" data-target="modal-paper-presentation2" onclick="openModal('modal-paper-presentation2')">VIEW DETAILS</a></li>
             </ul>
         </div>
     </div>
 </div>
 
 <div class="last-sec w-full flex items-center justify-center mt-5">
-    <h1 class="text-white text-[1rem]">Copyright © | All rights reserved | Privacy Policy</h1>
+    <h1 class="text-white text-[0.5rem] lg:text-[1rem]">Copyright © | All rights reserved | Privacy Policy</h1>
 </div>
 </footer>
 
@@ -907,60 +1856,493 @@
     </button>
 </div>
 </div>
-<div id="modal-about-global2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-    <h2 class="text-2xl font-bold mb-4">About Global</h2>
-    <p>Details about global...</p>
-    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-global2')">
-        <i class="ri-close-line text-2xl"></i>
-    </button>
+<!-- ends -->
+
+
+<!-- about global2 -->
+<div id="modal-about-global2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+
+        <div class="modal-title flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem]">ABOUT <span class="text-[#F1CE72]">ENTRECON GLOBAL</span></h2>
+        </div>
+        
+        <div class="modal-img w-full flex justify-center">
+            <img class="w-[70vw] lg:w-[16vw]" src="./images/logoentreconglobal 1.png" alt="">
+        </div>
+        <div class="modal-para w-full flex justify-center mt-4">
+            <p class="text-justify text-[1rem] w-[90%]">A convergence of pioneers, innovators, and thought leaders, our event transcends the boundaries of a traditional conference, offering an immersive experience that ignites creativity, fosters global connections,and equips participants with actionable strategies.
+                Connect with industry titans, trailblazers, and fellow visionaries from every corner of the globe. Exclusive access to workshops, panels, and talks delivered by the brightest minds in entrepreneurship ensures you gain insights that transcend the ordinary.<br/><br/>
+                We create a dynamic space where global perspectives blend together to create a melting pot of ideas, cultures, and business methodologies. Discover practical strategies rooted in the real-world experiences and successes of experts who have navigated the complexities of entrepreneurship.With EntreCon Global, you're not just attending a conference – you're entering a realm where ideas take flight, connections amplify, and the realm of possibilities expands. The event stands as an international epicenter of entrepreneurship evolution, where creativity and innovation thrive in equal measure.
+                </p>
+        </div>
+
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-global2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
 </div>
+
+<!-- ends -->
+
+
+
+
+<!-- about-carmel -->
+
+<div id="modal-about-carmel2" class="modal2 fixed inset-0 bg-black bg-opacity-50  items-start justify-center p-4 z-[99999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase">ABOUT <span class="text-[#F1CE72]">Mount Carmel College</span></h2>
+        </div>
+        
+        <div class="modal-img w-full flex justify-center">
+            <img class="w-[70vw] lg:w-[15vw]" src="./images/carmel-logo.png" alt="">
+        </div>
+        <div class="modal-para w-full flex justify-center mt-4">
+            <p class="text-justify text-[1rem] w-[90%]">Mount Carmel College, Autonomous, Bangalore, established in 1948, is  dedicated to the empowerment of women through education. Managed  by the Carmelite Sisters of St. Teresa (CSST), the college has set  benchmarks in quality education and has empowered generations of  women to become agents of change in society. Affiliated with Bangalore  University and Bengaluru Central University, the college is recognized  under 2(f) and 12(b) of the UGC Act. Granted autonomous status in 2005,  MCC has been accredited by NAAC with an ‘A+’ grade in the last round of  accreditation in 2019. The college offers 36 undergraduate and 12  postgraduate programs, with nearly 7,000 students enrolled, making it  one of the top-ranked institutions in India</p>
+        </div>
+        <div class="about-confe-objectives">
+            <div class="obj-title mt-4 bg-black w-[80vw] lg:w-[80vw] leading-none xl:w-[80vw] h-[10vh] flex items-center justify-start pl-5 rounded-br-xl rounded-tr-xl">
+                <h2 class="lg:text-[1.5rem] xl:text-[1.5rem] font-bold uppercase text-white">ABOUT Mount Carmel Centre  forInnovation,Incubation and 
+                    Entrepreneurship <span class="text-[#F1CE72]">(MCCIIE)</span></h2>
+            </div>
+        </div>
+        <div class="modal-para w-full flex justify-center mt-4">
+            <p class="text-justify text-[1rem] w-[90%]">MCCIIE is an initiative by Mount Carmel College to foster a culture of  innovation and entrepreneurship among students, faculty, and alumni.  The center aims to transform business ideas into reality by developing  individual talent, skills, and personality. It provides a supportive  entrepreneurial environment that accelerates the development of start up companies through various resources and services. The main goal of  MCCIIE is to produce successful firms that are financially viable and  independent.</p>
+        </div>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-carmel2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
 </div>
-<div id="modal-about-carmel2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-    <h2 class="text-2xl font-bold mb-4">About Founder</h2>
-    <p>Details about the founder...</p>
-    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-carmel2')">
-        <i class="ri-close-line text-2xl"></i>
-    </button>
+
+
+<!-- ends -->
+
+<!-- mountcarmel-directors-msg -->
+<div id="modal-about-director2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase"><span class="text-[#F1CE72]">Mount Carmel</span> DIRECTOR’S MESSAGE</h2>
+        </div>
+        <div class="msg-content-section flex lg:flex-row flex-col">
+            <div class="msg-img-sec w-full lg:w-[40vw] h-[50vh] lg:h-[70vh] flex items-center">
+                <img class="w-[90%] xl:w-[80%]" src="./images/director.svg" alt="">
+            </div>
+
+            <div class="msg-para-sec w-full lg:w-[60vw] h-auto lg:h-[70vh] flex flex-col gap-5 justify-center p-5">
+                <h3 class="director-para-main text-[1.2rem] xl:text-[1.5rem] leading-none">Dear Entrepreneurs, Innovators, and Visionaries,</h3>
+                <p class="text-[1rem] text-justify">I have been privileged to share insights in over 500 speaking sessions, judged internationally renowned business plan competitions, and am currently mentoring 64 companies, out of which 9 have already crossed the unicorn threshold. Through these experiences, I observed gaps in the market that hinder entrepreneurs' success – delayed access to crucial resources, lack of mentorship, and limited networking opportunities.
+                    Entrecon Global was born out of the idea to fill these gaps and assist entrepreneurs in reaching their highest potential.
+                    I want to wholeheartedly invite you to Entrecon Global, where ideas converge and partnerships thrive. Our journey began with a simple yet profound vision - to create a platform that transcends borders and industries, uniting minds driven by innovation.
+                    Entrepreneurs hold the power to change the world through their innovations, ideas, and execution. They deserve a steadfast guardian, a support system that nurtures their dreams and safeguards their journey.</p>
+                <h3 class="director-para-main text-[1.2rem] leading-none">With Gratitude,<rb/>Shiju Babu<br/></h3>
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-director2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
 </div>
+<!-- ends -->
+
+
+<!-- founders-msg -->
+<div id="modal-about-founder2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase"><span class="text-[#F1CE72]">Mount Carmel</span> DIRECTOR’S MESSAGE</h2>
+        </div>
+        <div class="msg-content-section flex lg:flex-row flex-col">
+            <div class="msg-img-sec w-full lg:w-[40vw] h-[50vh] lg:h-[70vh] flex items-center">
+                <img class="w-[90%] xl:w-[80%]" src="./images/foundersimg.svg" alt="">
+            </div>
+
+            <div class="msg-para-sec w-full lg:w-[60vw] h-auto lg:h-[70vh] flex flex-col gap-5 justify-center p-5">
+                <h3 class="director-para-main text-[1.2rem] xl:text-[1.5rem] leading-none">Dear Entrepreneurs, Innovators, and Visionaries,</h3>
+                <p class="text-[1rem] text-justify">It is a great pleasure for me to invite you all to the International Conference on “Emerging Trends in Research, Innovation & Entrepreneurship – A Way Forward” on September 24th & 25th, in collaboration with Entrecon Global.
+                    Staying updated and fostering meaningful connections in today’s rapidly evolving business landscape is paramount for growth. To navigate the complex world of commerce, more than intuition is needed; everyone requires knowledge, connections, and insights.
+                    Conferences on Innovation and Global Entrepreneurship emerge as powerful platforms for networking opportunities, knowledge sharing, professional development, showcasing innovations, and more. Global Entrepreneurship conferences are more than just events. They are dynamic ecosystems that drive growth, innovation, collaboration, and continuous learning in the business world.</p>
+                <h3 class="director-para-main text-[1.2rem] leading-none">With Gratitude,<rb/>Sr Albina,<br/> Director,
+                    Mount Caramel College</h3>
+            </div>
+        </div>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-founder2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
 </div>
-<div id="modal-about-director2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-    <h2 class="text-2xl font-bold mb-4">About Director</h2>
-    <p>Details about the director...</p>
-    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-director2')">
-        <i class="ri-close-line text-2xl"></i>
-    </button>
+<!-- ends -->
+
+
+<!-- schhedule-starts -->
+<div id="modal-schedule2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[90vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase"><span class="text-[#F1CE72]">EVENT </span> AGENDA</h2>
+        </div>
+        <div class="event-details-main w-full h-auto p-5 flex flex-col gap-10 items-center justify-center">
+
+
+            <!-- day1 -->
+                         <!-- day1 -->
+            <div  class="event1 w-[90%] h-auto border-2 border-black rounded-[2vw] overflow-hidden flex lg:flex-row flex-col">
+
+                <!-- left-sec -->
+                <div class="left-event w-full lg:w-[15vw] h-auto  bg-black text-white flex flex-col items-center justify-center gap-5 py-5 lg:py-0 px-5 xl:px-10">
+                
+                    <div class="text-cont-event w-full h-auto flex flex-col items-end justify-end">
+                        <h1 class="event-agenda-day text-[1.2rem]">DAY 1</h1>
+                    <h2 class="event-agenda-date text-[#F1CE72] text-[1rem]">SEPTEMBER 24 </h2>
+                    </div>
+
+                    
+                    <div class="event-details flex items-center justify-center w-full h-auto lg:h-[80vh]">
+                        <h1 class="main-title-evnt text-[2rem] lg:text-[4rem] text-white rotate-0 lg:rotate-[-90deg] leading-none"><span class="text-[#F1CE72] ">EVENTS</span><br/>
+                            SCHEDULE</h1>
+                    </div>
+                </div>
+
+                <!-- right-sec -->
+                
+                <div class="right-event w-full  lg:w-[85vw] h-auto lg:h-full lg:p-5 xl:p-10 flex flex-col gap-3">
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>9:00 AM - 11:00 AM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Inauguration and Keynote Address</h2>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Opening remarks by the event  organizers.  
+    
+                                    Keynote speech by a distinguished  guest.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>11:00 AM - 12:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Entrepreneurial Psychological  Attributes</h2>
+                                <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Noona Nafousi</span></h3>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Topics: The importance of  psychological attributes in  entrepreneurship, overcoming mental  barriers, and fostering resilience.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- line-2 -->
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>12:00 AM - 1:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Workshop - Psychological  Strengths for Entrepreneurs</h2>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Interactive activities and discussions on  building mental strength and confidence.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>1:00 PM - 2:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2> Lunch Break</h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- line-3 -->
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>2:00 PM - 3:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Leadership and Communication</h2>
+                                <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Daria Rudnik</span></h3>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Topics: Effective leadership  communication, team dynamics, and  strategies for remote and hybrid  teams.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>3:00 PM - 4:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Workshop - Enhancing Leadership  Skills</h2>
+                            </div>
+                            <div class="event-subdes">
+                                <p>Hands-on activities to improve  communication and leadership abilities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- line-4 -->
+                    <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                        <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                <h2>4:00 PM - 5:00 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Networking Arena</h2>
+                            </div>
+                        </div>
+
+
+                        <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                            <div class="event-time text-[1rem] text-[#FF4C00]">
+                                <h2>5:00 PM - 5:15 PM</h2>
+                            </div>
+                            <div class="event-subtitle text-[1.2rem] leading-none">
+                                <h2>Q&A and Closing Remarks for Day 1</h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+                      <!-- day2 -->
+                      <div  class="event1 w-[90%] h-auto border-2 border-black rounded-[2vw] overflow-hidden flex lg:flex-row flex-col">
+
+                        <!-- left-sec -->
+                        <div class="left-event w-full lg:w-[15vw] h-auto  bg-black text-white flex flex-col items-center justify-center gap-5 py-5 lg:py-0 px-5 xl:px-10">
+                        
+                            <div class="text-cont-event w-full h-auto flex flex-col items-end justify-end">
+                                <h1 class="event-agenda-day text-[1.2rem]">DAY 2</h1>
+                            <h2 class="event-agenda-date text-[#F1CE72] text-[1rem]">SEPTEMBER 25 </h2>
+                            </div>
+        
+                            
+                            <div class="event-details flex items-center justify-center w-full h-auto lg:h-[80vh]">
+                                <h1 class="main-title-evnt text-[2rem] lg:text-[4rem] text-white rotate-0 lg:rotate-[-90deg] leading-none"><span class="text-[#F1CE72] ">EVENTS</span><br/>
+                                    SCHEDULE</h1>
+                            </div>
+                        </div>
+        
+                        <!-- right-sec -->
+                        
+                        <div class="right-event w-full  lg:w-[85vw] h-auto lg:h-full lg:p-5 xl:p-10 flex flex-col gap-3">
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+        
+                                <!-- line1 -->
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2>10:00 AM - 11:00 AM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Innovation and Business Model</h2>
+                                        <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Saeed Al Dhaheri</span></h3>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Topics: Innovative business models,  leveraging technology for business  growth, and case studies of successful  innovations.</p>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time text-[1rem] text-[#FF4C00]">
+                                        <h2> 11:00 AM - 11:45 AM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2> Q & A</h2>
+                                        <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Saeed Al Dhaheri</span></h3>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Topics: The importance of  psychological attributes in  entrepreneurship, overcoming mental  barriers, and fostering resilience.</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+        
+        
+                            <!-- line-2 -->
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2> 11:45 AM - 12:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Coffee Break</h2>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time text-[1rem] text-[#FF4C00]">
+                                        <h2>12:00 PM - 1:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2> Session</h2>
+                                        <h3 class="text-[1rem] speaker mt-2">Speaker: <span class="text-[#FF4C00]">Sudha Murthy</span></h3>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Chairperson at Murthy Trusts  MP Rajya Shaba</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <!-- line-3 -->
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2>1:00 PM - 2:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2> Lunch Break</h2>
+                                    </div>
+                                </div>
+        
+        
+                                <div class="sec-part2 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time text-[1rem] text-[#FF4C00]">
+                                        <h2>2:00 PM - 3:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Panel Discussion and Interactive  Sessions on Case Studies</h2>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Detailed case studies on groundbreaking  startups and interactive group  discussions</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+        
+                            <!-- line-4 -->
+                            <div class="event-sec-1 flex lg:flex-row flex-col gap-5">
+                                <div class="sec-part1 w-full lg:w-[50%] h-auto p-2 flex flex-col gap-3">
+                                    <div class="event-time  text-[1rem] text-[#FF4C00]">
+                                        <h2>3:00 PM - 5:00 PM</h2>
+                                    </div>
+                                    <div class="event-subtitle text-[1.2rem] leading-none">
+                                        <h2>Valedictory</h2>
+                                    </div>
+                                    <div class="event-subdes">
+                                        <p>Presentation of awards to outstanding  startups and contributors. </p>
+                                        <p class="mt-2">Closing remarks and thank you note  by the organizers.</p>
+                                    </div>
+                                </div>
+        
+        
+                            </div>
+        
+        
+        
+                        </div>
+                    </div>
+        
+        
+
+
+
+
+
+
+        </div>
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
 </div>
+
+<!-- ends -->
+
+<!-- paper-presentation -->
+<div id="modal-paper-presentation2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[99999999999999999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase"><span class="text-[#F1CE72]">PAPER</span> PRESENTATION</h2>
+        </div>
+        
+           <!-- image + paragraph -->
+    <div class="text-center flex flex-col items-center justify-center gap-7">
+        <!-- presenting image-->
+
+        <div class="modal-img w-full flex justify-center mt-10">
+            <img src="./images/conference-stage-speaker-presents-new-product-talks-about-performance-neural-networks-artificial-intelligence-big-data-machine-learning-live-business-event-with-large-audience_861143-1955 1.svg" alt="Presentation" class="w-[70vw] lg:w-[35vw]">
+        </div>
+
+      <!-- paragraph -->
+
+      <div class="modal-para w-full flex justify-center mt-4">
+        <p class="text-justify text-[1rem] w-[90%]">We invite prospective authors to contribute and help shape the conference through submissions of research abstracts, papers, and e-posters. High-quality research contributions describing original and unpublished results in all areas of Innovation and Entrepreneurship are cordially invited.</p>
+    </div>
+    
+    </div>
+    
+
+        <!-- conference sub theme -->
+        <div class="about-confe-objectives">
+            <div class="obj-title mt-4 bg-black w-[80vw] lg:w-[70vw ] xl:w-[60vw] h-[8vh] flex items-center justify-start pl-5 rounded-br-xl rounded-tr-xl">
+                <h2 class="lg:text-[1.5rem] xl:text-[2rem] font-bold uppercase text-white">CONFERENCE <span class="text-[#F1CE72]">SUB THEMES</span> FOR PAPER PRESENTATION</h2>
+            </div>
+        </div>
+
+
+    <div class="list mx-20 text-[1rem] font-[Gilroy-regular] mt-10">
+      <ul class="list-decimal list-outside space-y-2 text-left">
+        <li>Startup culture in India</li>
+        <li>AI and entrepreneurship</li>
+        <li>Role of Innovation/Entrepreneurship in sustainable development</li>
+        <li>The role of innovation in the modern era</li>
+        <li>Social Innovation, Public and Social Good</li>
+        <li>Women Entrepreneurship, Growth and Competitiveness</li>
+        <li>Entrepreneurship and regional development</li>
+        <li>Recent government Policy for promoting Entrepreneurship</li>
+        <li>Corporate and Strategic Entrepreneurship</li>
+        <li>The role of educational institutions in fostering entrepreneurship</li>
+        <li>Green entrepreneurship/Ecopreneurship</li>
+        <li>Innovative strategies for maintaining good customer relationship</li>
+        <li>Entrepreneurship and gender</li>
+        <li>Edutech entrepreneurship / homepreneurs / foodpreneurs / technopreneurs / Biotech entrepreneurship /Sports entrepreneurship/social entrepreneurship /Hustler Entrepreneurship and cyberentrepreneurship</li>
+        <li>Skill development and entrepreneurship</li>
+        <li>IPR</li>
+      </ul>
+
+    </div>
+    <div class="ml-12 flex flex-col items-start ">
+      <p class="text-[1rem] lg:text-[1.5rem] xl:text-[1.7rem] font-[Gilroy-Medium] mb-1 mt-1">Send Your Paper Submission To</p>
+      <a href="mailto:demo@gmail.com" class="text-red-500 text-[1.3rem] font-[Gilroy-Medium underline mb-2">demo@gmail.com</a>
+    </div>
+    
+
+
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-paper-presentation2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
 </div>
-<div id="modal-about-founder2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-    <h2 class="text-2xl font-bold mb-4">About Enthusiast</h2>
-    <p>Details about the enthusiast...</p>
-    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-about-founder2')">
-        <i class="ri-close-line text-2xl"></i>
-    </button>
-</div>
-</div>
-<div id="modal-schedule2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-    <h2 class="text-2xl font-bold mb-4">Schedule</h2>
-    <p>Details about the schedule...</p>
-    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-schedule2')">
-        <i class="ri-close-line text-2xl"></i>
-    </button>
-</div>
-</div>
-<div id="modal-paper-presentation2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-    <h2 class="text-2xl font-bold mb-4">Paper Presentation</h2>
-    <p>Details about the paper presentation...</p>
-    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-paper-presentation2')">
-        <i class="ri-close-line text-2xl"></i>
-    </button>
-</div>
-</div>
+<!-- ends -->
+
+
+
+<!-- grab-pass -->
 <div id="modal-grab-pass2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
 <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
     <h2 class="text-2xl font-bold mb-4">Grab Your Pass</h2>
@@ -970,15 +2352,165 @@
     </button>
 </div>
 </div>
-<div id="modal-book-stall2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
-<div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
-    <h2 class="text-2xl font-bold mb-4">Book Your Stall</h2>
-    <p>Details about booking your stall...</p>
-    <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-book-stall2')">
-        <i class="ri-close-line text-2xl"></i>
-    </button>
+<!-- ends -->
+
+
+<!-- book-stall -->
+
+<div id="modal-book-stall2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4 z-[9999999999999999]">
+    <div class="modal-content bg-white rounded-lg py-8 w-[90vw] h-[95vh] xl:h-[98vh] overflow-scroll mx-auto mt-4 relative ">
+        <div class="modal-title leading-none flex items-center justify-center w-full h-[10vh] mb-4 mt-5 bg-black">
+            <h2 class="font-bold text-white text-center text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] uppercase">BOOK YOUR <span class="text-[#F1CE72]">STALL</span></h2>
+        </div>
+
+
+
+
+
+        <!-- content -->
+
+        <div class="container flex flex-col gap-[3vw] mt-10">
+
+
+            <!-- Package-1 -->
+            <div class="packag1 w-full flex items-center justify-center">
+                <!-- box1 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[55vh] xl:h-[50vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-between px-[3vw]">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black">BOOK YOUR STALL</h3>
+                                <h3 class="text-[1rem] font-[Gilroy-Medium] text-[#03A800] mb-4">Size: 6.5 x 6.5 x 8 feet
+                                </h3>
+                            </li>
+                             
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">3 lights + 3 Chairs per Stall</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Front facia branding</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">50 inch plasma tv with stand</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Vinyl printing on all the walls</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Food Coupons worth Rs. 3500/-</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;75000.00</span>
+                            <span class="text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;6500.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[62vw] lg:w-[70vw]  xl:w-[66vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package-2 -->
+            <div class="packag1 w-full flex items-center justify-center">
+                <!-- box2 -->
+                <div
+                    class="p-4 w-[85vw] lg:w-[75vw] xl:w-[70vw] lg:h-[55vh] xl:h-[50vh] border-2 border-black rounded-3xl">
+
+
+                    <div class="student-price flex flex-col lg:flex-row xl:flex-row items-center justify-between px-[3vw]">
+
+                        <ul class="mb-4 space-y-2">
+                            <li>
+                                <h3 class="text-[1.54rem] font-[Gilroy-semibold] text-black">INVESTORS ARENA</h3>
+                                <h3 class="text-[1rem] font-[Gilroy-Medium] text-[#03A800] mb-4">Size : 10 x 6.5 x 8 feet
+                                </h3>
+                            </li>
+                             
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">3 lights + 3 Chairs per Stall</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Front facia branding</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">50 inch plasma tv with stand</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Vinyl printing on all the walls</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span> <img src="./images/green-tick-and-red-cross-dadgsgssg 1.svg" alt=""></span>
+                                <span class="font-[Gilroy-Regular]">Food Coupons worth Rs. 3500/-</span>
+                            </li>
+                        </ul>
+
+                         
+                        <div class="flex flex-col justify-between items-center gap-2">
+                            <span
+                                class="text-red-500 text-[1.3rem] line-through font-[Gilroy-semibold]">&#8377;75000.00</span>
+                            <span class="text-green-500 text-[2rem] font-[Gilroy-semibold]">&#8377;8500.00</span>
+
+                        </div>
+
+
+                    </div>
+                    <hr class="w-full text-black border-black">
+                    <!-- buy now -->
+                    <div class="btn w-[62vw] lg:w-[70vw]  xl:w-[66vw] py-5 flex items-center justify-end ">
+                        <button
+                            class="w-[50vw] lg:w-[15vw] xl:w-[12vw] bg-[#F1CE72] text-black px-4  py-2 rounded-3xl hover:bg-yellow-500 font-[Gilroy-Medium] text-[1.3rem]">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Package-3 -->
+             
+
+
+             
+            <!--   -->
+
+
+        </div>
+
+
+
+        <button class="absolute top-4 right-4 text-gray-800" onclick="closeModal('modal-book-stall2')">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+    </div>
 </div>
-</div>
+
+
+<!-- ends -->
+
+
+
 <div id="modal-be-sponsor2" class="modal2 fixed inset-0 bg-black bg-opacity-50 items-start justify-center p-4">
 <div class="bg-white rounded-lg p-8 max-w-lg mx-auto mt-4 relative">
     <h2 class="text-2xl font-bold mb-4">Be Your Sponsor</h2>
