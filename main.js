@@ -400,3 +400,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+// gsap
+window.addEventListener('load', function() {
+    gsap.from(".main-hero-title", {
+        duration: 2, 
+        x: -1000, 
+        opacity: 0, 
+        ease: "power4.out"
+    });
+
+    gsap.from(".sub-text", {
+        duration: 2, 
+        x: 1000, 
+        opacity: 0, 
+        ease: "power4.out"
+    });
+});
