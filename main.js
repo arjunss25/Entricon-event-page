@@ -55,8 +55,6 @@ function openModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.style.display = "block";
     document.body.appendChild(modal)
-    console.log('hello')
-    // lenis.stop();
     document.body.style.overflow = 'hidden';
 }
 
