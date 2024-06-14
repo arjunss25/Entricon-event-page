@@ -28,8 +28,8 @@
 
 /* For the entire scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; 
-    height: 8px; 
+    width: 0px; 
+    height: 0px; 
 }
 
 /* Track */
@@ -62,20 +62,20 @@
 .nav-links,.contact-btn,.sub-text,.venue-place,.venue-date,.timer-text,.name-sec,.coreimg-contents h1,footer h3,.obj-title,.Key-hlt,.hlt,.director-para-main,.phase-btn,.event-agenda-day,.nav-links-mobile{
     font-family: "gilroy-semibold";
 }
-.name-sec,.desig,.date,.speaker{
+.name-sec,.desig,.date,.speaker,.privacy-date,.priv-sub-title{
     font-family: "gilroy-medium";
 }
 
 .main-hero-title{
     font-family: "fredokaregular";
 }
-.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li,.modal-para,.confe-objectives-content,.phase-des-sub,.last-sec,.event-subdes{
+.sub-text,.why-content-sec,.why-box-para,.coreimg-contents p,footer li,.modal-para,.confe-objectives-content,.phase-des-sub,.last-sec,.event-subdes,.priv-para1{
     font-family: "gilroy-regular";
 }
 .subtitle{
     font-family: "redrose";
 }
-.timer-number,.why-title,.why-box-title,.sponsors-title,.core-team,.anime-content,.modal-title,.phase-txt,.phase-des-title,.event-agenda-date,.main-title-evnt,.event-time,.event-subtitle{
+.timer-number,.privacy-tittle-main,.why-title,.Investment-title,.advisory-title,.why-box-title,.sponsors-title,.conviner-title,.core-team,.anime-content,.modal-title,.phase-txt,.phase-des-title,.event-agenda-date,.main-title-evnt,.event-time,.event-subtitle,.priv-intro-title{
     font-family: "gilroy-bold";
 }
 
@@ -145,7 +145,6 @@ footer h3{
 }
 .modal2 {
     position: fixed;
-    top: auto !important;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -208,3 +207,9 @@ footer h3{
 .anime-content:hover .scrolling-content {
     animation-play-state: paused;
 }
+
+
+
+
+
+

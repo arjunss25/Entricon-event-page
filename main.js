@@ -63,6 +63,7 @@ function closeModal(modalId) {
     modal.style.display = "none";
     lenis.start();
     document.body.style.overflow = 'visible';
+    document.body.style.overflowX = 'hidden';
 }
 
 var modal3 = document.querySelectorAll('.modal3');
@@ -72,6 +73,7 @@ modal3.forEach(function(modal) {
             modal.style.display = 'none';
             // lenis.start();
             document.body.style.overflow = 'visible';
+            document.body.style.overflowX = 'hidden';
         }
     });
 });
@@ -83,6 +85,7 @@ closeButtons.forEach(function(button) {
         modal.style.display = 'none';
         // lenis.start();
         document.body.style.overflow = 'visible';
+        document.body.style.overflowX = 'hidden';
     });
 });
 
@@ -174,6 +177,7 @@ modals.forEach(function(modal) {
         }
         // lenis.start();
         document.body.style.overflow = 'visible';
+        document.body.style.overflowX = 'hidden';
     });
 });
 
@@ -333,6 +337,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 modal.classList.remove('show');
                 // lenis.start();
                 document.body.style.overflow = 'visible';
+                document.body.style.overflowX = 'hidden';
             }
         });
     });
@@ -362,6 +367,7 @@ function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('show');
     // lenis.start();
     document.body.style.overflow = 'visible';
+    document.body.style.overflowX = 'hidden';
 }
 
 
@@ -405,18 +411,385 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // gsap
-window.addEventListener('load', function() {
-    gsap.from(".main-hero-title", {
-        duration: 2, 
-        x: -1000, 
-        opacity: 0, 
-        ease: "power4.out"
-    });
 
-    gsap.from(".sub-text", {
-        duration: 2, 
-        x: 1000, 
-        opacity: 0, 
-        ease: "power4.out"
-    });
+
+// timer
+gsap.from(".timer-section",{
+    y:100,
+    opacity:0,
+    scrollTrigger:{
+        trigger:".venue-section",
+        scroller:"body",
+        // markers:true,
+        start:"top 40%",
+        end:"top 60%",
+        scrub:3
+    }
+})
+
+
+
+
+// advisory
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+gsap.from(".advisory-title h2", {
+    scrollTrigger: {
+        trigger: ".advisory-title",
+        start: "top 80%",  
+        end: "bottom 60%",  
+        toggleActions: "play none none none"  
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: -50,
+    ease: "power4.out"
+});
+
+
+gsap.from(".sec-1 .card1", {
+  scrollTrigger: {
+    trigger: ".sec-1",
+    start: "top 80%",
+    end: "bottom 60%",
+    toggleActions: "play none none none"
+  },
+  duration: 1,
+  opacity: 0,
+  y: 50,
+  ease: "power3.out",
+  stagger: 0.3
+});
+
+
+gsap.from(".sec-2 .card1", {
+  scrollTrigger: {
+    trigger: ".sec-2",
+    start: "top 80%",
+    end: "bottom 60%",
+    toggleActions: "play none none none"
+  },
+  duration: 1,
+  opacity: 0,
+  y: 50,
+  ease: "power3.out",
+  stagger: 0.3
+});
+
+
+gsap.from(".card1 img", {
+  scrollTrigger: {
+    trigger: ".card1",
+    start: "top 80%",
+    end: "bottom 60%",
+    toggleActions: "play none none none"
+  },
+  duration: 1,
+  opacity: 0,
+  y: 50,
+  ease: "power3.out",
+  stagger: 0.2
+});
+
+gsap.from(".card1 .name-sec", {
+  scrollTrigger: {
+    trigger: ".card1",
+    start: "top 80%",
+    end: "bottom 60%",
+    toggleActions: "play none none none"
+  },
+  duration: 1,
+  opacity: 0,
+  y: 50,
+  ease: "power3.out",
+  stagger: 0.2
+});
+
+gsap.from(".card1 .desig", {
+  scrollTrigger: {
+    trigger: ".card1",
+    start: "top 80%",
+    end: "bottom 60%",
+    toggleActions: "play none none none"
+  },
+  duration: 1,
+  opacity: 0,
+  y: 50,
+  ease: "power3.out",
+  stagger: 0.2
+});
+
+
+// core-team
+
+gsap.from(".core-team h1", {
+    scrollTrigger: {
+        trigger: ".core-team",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: -50,
+    ease: "power3.out"
+});
+
+
+gsap.from(".coreimg-contents .first, .coreimg-contents .Second, .coreimg-contents .third, .coreimg-contents .fourth", {
+    scrollTrigger: {
+        trigger: ".coreimg-contents",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+gsap.from(".coreimg-contents img", {
+    scrollTrigger: {
+        trigger: ".coreimg-contents",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+gsap.from(".coreimg-contents head-para", {
+    scrollTrigger: {
+        trigger: ".coreimg-contents",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+
+// speakers
+
+gsap.from(".speakers h1", {
+    scrollTrigger: {
+        trigger: ".speakers",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: -50,
+    ease: "power3.out"
+});
+
+
+gsap.from(".box1", {
+    scrollTrigger: {
+        trigger: ".box1",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+gsap.from(".box1 img", {
+    scrollTrigger: {
+        trigger: ".box1",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+gsap.from(".box1 .name, .box1 .sub-head", {
+    scrollTrigger: {
+        trigger: ".box1",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+gsap.from(".box1 .para", {
+    scrollTrigger: {
+        trigger: ".box1",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+
+
+
+
+
+
+
+
+
+// HERO
+
+gsap.from(".main-hero-title", {
+    duration: 2,
+    x: -1000,
+    opacity: 0,
+    ease: "power4.out"
+});
+
+
+gsap.from(".sub-text", {
+    duration: 2,
+    x: 1000,
+    opacity: 0,
+    ease: "power4.out"
+});
+
+gsap.from(".hero-logo", {
+    scrollTrigger: {
+        trigger: ".hero-logo",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+gsap.from(".subtitle h2", {
+    scrollTrigger: {
+        trigger: ".subtitle",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out"
+});
+
+
+gsap.from(".venue-details h3", {
+    scrollTrigger: {
+        trigger: ".venue-details",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+gsap.from(".hero-btns img", {
+    scrollTrigger: {
+        trigger: ".hero-btns",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    stagger: 0.3
+});
+
+
+
+// sponsor-title
+
+gsap.from(".sponsors-title h2", {
+    scrollTrigger: {
+        trigger: ".sponsors-title",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: -50,
+    ease: "power3.out"
+});
+
+
+
+// why-title
+gsap.from(".why-title h2", {
+    scrollTrigger: {
+        trigger: ".why-title",
+        start: "top 80%",  
+        end: "bottom 60%",  
+        toggleActions: "play none none none"  
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: -50,
+    ease: "power4.out"
+});
+
+
+
+// conviner-title
+gsap.from(".conviner-title h2", {
+    scrollTrigger: {
+        trigger: ".conviner-title",
+        start: "top 80%",  
+        end: "bottom 60%", 
+        toggleActions: "play none none none"  
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: -50,
+    ease: "power4.out"
 });

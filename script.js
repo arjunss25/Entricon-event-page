@@ -71,6 +71,7 @@ function closeModal(modalId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "none";
   document.body.style.overflow = 'visible';
+  document.body.style.overflowX = 'hidden';
 }
 
 var modal2 = document.querySelectorAll('.modal2');
@@ -80,6 +81,7 @@ modal2.forEach(function(modal) {
           modal.style.display = 'none';
           // lenis.start();
           document.body.style.overflow = 'visible';
+          document.body.style.overflowX = 'hidden';
       }
   });
 });
@@ -91,5 +93,155 @@ closeButtons.forEach(function(button) {
       modal.style.display = 'none';
       // lenis.start();
       document.body.style.overflow = 'visible';
+      document.body.style.overflowX = 'hidden';
   });
+});
+
+
+
+
+
+// gsap
+gsap.registerPlugin(ScrollTrigger);
+
+
+gsap.from(".main-hero-title", {
+    duration: 2,
+    x: -1000,
+    opacity: 0,
+    ease: "power4.out"
+});
+
+
+gsap.from(".sub-text p", {
+    scrollTrigger: {
+        trigger: ".sub-text",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power4.out"
+});
+
+
+
+
+gsap.from(".banner-logos img", {
+    scrollTrigger: {
+        trigger: ".banner-logos",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power4.out",
+    stagger: 0.3  
+});
+
+
+gsap.from(".subtitle h2", {
+    scrollTrigger: {
+        trigger: ".subtitle",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power4.out"
+});
+
+
+gsap.from(".venue-details h3", {
+    scrollTrigger: {
+        trigger: ".venue-details",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power4.out",
+    stagger: 0.3 
+});
+
+
+gsap.from(".hero-btns img", {
+    scrollTrigger: {
+        trigger: ".hero-btns",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power4.out",
+    stagger: 0.3 
+});
+
+
+// timer
+gsap.from(".timer-section",{
+    y:100,
+    opacity:0,
+    scrollTrigger:{
+        trigger:".venue-section",
+        scroller:"body",
+        // markers:true,
+        start:"top 40%",
+        end:"top 60%",
+        scrub:3
+    }
+})
+
+
+gsap.from(".why-title h2", {
+    scrollTrigger: {
+        trigger: ".why-title",
+        start: "top 80%", 
+        end: "bottom 60%",  
+        toggleActions: "play none none none"  
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power4.out"
+});
+
+gsap.from(".Investment-title h2", {
+    scrollTrigger: {
+        trigger: ".why-title",
+        start: "top 80%", 
+        end: "bottom 60%",  
+        toggleActions: "play none none none"  
+    },
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power4.out"
+});
+
+
+
+
+gsap.from(".advisory-content .card1", {
+    scrollTrigger: {
+        trigger: ".advisory-content",  
+        start: "top 80%",  
+        end: "bottom 60%",  
+        toggleActions: "play none none none" 
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2, 
+    ease: "power4.out"
 });
